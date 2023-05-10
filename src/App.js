@@ -1,25 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.css'; //All child components are styled w/styled-components, though
+import Navigation from './components/Navigation'
+import DisplayBox from './components/DisplayBox'
 
-function App() {
+const navItems=[{title: 'About this app', url: null}, {title: 'Contact', url: null}]
+
+export default function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <Navigation navItems={navItems}>Arizona Demographics</ Navigation>
+        <DisplayBox />
     </div>
   );
 }
 
-export default App;
+
