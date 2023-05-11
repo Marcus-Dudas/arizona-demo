@@ -29,10 +29,10 @@ export default function TextDisplay ({target}) {
 
 //styles
 const TextContainer = styled.div`
+    border: 1px solid #95fcf2;
+    border-radius: 5px;
     display: flex;
     flex-direction: column;
-    background: rgb(0,0,0);
-    background: linear-gradient(90deg, rgba(0,0,0,1) 67%, rgba(0,6,10,0.84) 79%, rgba(0,11,19,0.64) 93%, rgba(212,212,212,0) 100%);
     width: 35%;
     height: 100%;
     margin: 0;

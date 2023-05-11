@@ -24,7 +24,6 @@ export default function DisplayBox () {
 
 //styles
 const Display = styled.div`
-    border: 1px solid white;
     display: flex;
     flex-direction: row;
     height: 80vh;
