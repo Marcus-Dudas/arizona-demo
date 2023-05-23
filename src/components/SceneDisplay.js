@@ -1,13 +1,20 @@
 import styled from 'styled-components'
+
 import { Canvas} from '@react-three/fiber'
 import { OrbitControls, PerspectiveCamera, useGLTF, SpotLight} from '@react-three/drei'
-import { Suspense } from 'react'
+import { Suspense, useState} from 'react'
+import AnimatedMesh from './AnimatedMesh'
 
 
 
 export default function SceneDisplay () {
     const {nodes} = useGLTF('/models/Arizona.glb', true)
-  
+    
+    //this iterates through object nodes and replaces them with copies to unbind meshes from each other so that pointer effects are confined to the mesh interacted with, not the entire group.
+    for (let nodeName in nodes) {
+        if (nodes[nodeName].material) {
+            nodes[nodeName].material = nodes[nodeName].material.clone()
+        }};
 
     return(
         <ThreeContainer>
@@ -15,13 +22,13 @@ export default function SceneDisplay () {
                 <Canvas>
                     <PerspectiveCamera
                         makeDefault={true}
-                        position={[0, 40, 0]}
+                        position={[0, 40, 3]}
                         fov={60}
                         near={0.1}
                         far={1000}  />
                     <OrbitControls />
                     <ambientLight
-                        intensity={.7}
+                        intensity={.4}
                         color={0xf5aa42}
                         position={[2, 5, 7]}
                     />
@@ -41,22 +48,21 @@ export default function SceneDisplay () {
                         attenuation={50}
                         anglePower={80}
                     />
-                    <primitive object={nodes.Apache} />
-                    <primitive object={nodes.Cochise} />
-                    <primitive object={nodes.Navajo} />
-                    <primitive object={nodes.Maricopa} />
-                    <primitive object={nodes.Coconino} />
-                    <primitive object={nodes.Gila} />
-                    <primitive object={nodes.Yavapai} />
-                    <primitive object={nodes.Greenlee} />
-                    <primitive object={nodes.Graham} />
-                    <primitive object={nodes.LaPaz} />
-                    <primitive object={nodes.Pinal} />
-                    <primitive object={nodes.Yuma} />
-                    <primitive object={nodes.Pima} />
-                    <primitive object={nodes.SantaCruz} />
-                    <primitive object={nodes.Mohave} />
-                    
+                   <AnimatedMesh mesh={nodes.Apache} name={"Apache"} coords={[11.5,3,-6]}/>
+                   <AnimatedMesh mesh={nodes.Cochise} name={"Cochise"}  coords={[10,3,12]}/>
+                   <AnimatedMesh mesh={nodes.Navajo} name={"Navajo"}  coords={[7,3,-4]}/>
+                   <AnimatedMesh mesh={nodes.Maricopa} name={"Maricopa"}  coords={[-5,3,5]}/>
+                   <AnimatedMesh mesh={nodes.Coconino} name={"Coconino"}  coords={[1,3,-10]}/>
+                   <AnimatedMesh mesh={nodes.Gila} name={"Gila"}  coords={[5,3,1]}/>
+                   <AnimatedMesh mesh={nodes.Yavapai} name={"Yavapai"}  coords={[-5,3,-3]}/>
+                   <AnimatedMesh mesh={nodes.Greenlee} name={"Greenlee"}  coords={[12.5,3,4]}/>
+                   <AnimatedMesh mesh={nodes.Graham} name={"Graham"}  coords={[10,3,7]}/>
+                   <AnimatedMesh mesh={nodes.LaPaz} name={"La Paz"}  coords={[-9,3,1]}/>
+                   <AnimatedMesh mesh={nodes.Pinal} name={"Pinal"}  coords={[2,3,7]}/>
+                   <AnimatedMesh mesh={nodes.Yuma} name={"Yuma"}  coords={[-9,3,8]}/>
+                   <AnimatedMesh mesh={nodes.Pima} name={"Pima"}  coords={[4,3,10]}/>
+                   <AnimatedMesh mesh={nodes.SantaCruz} name={"Santa Cruz"}  coords={[5.7,3,14]}/>
+                   <AnimatedMesh mesh={nodes.Mohave} name={"Mohave"}  coords={[-10.5,3,-7]}/>
                 </Canvas>
             </Suspense>
         </ThreeContainer>
