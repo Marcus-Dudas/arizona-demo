@@ -6,9 +6,8 @@ import {useEffect, useState} from 'react'
 export default function DisplayBox () {
     const [target, setTarget] = useState({name: null, text: null})
 
-    const handleClick = () => {
-        //when passed down to meshes, bind mesh to objects that can be set as target
-        setTarget()
+    const setText = (string) => {
+        setTarget(string)
     }
 
 
@@ -17,7 +16,7 @@ export default function DisplayBox () {
     return(
         <Display>
             <TextDisplay target={target} />
-            <SceneDisplay handler={handleClick} />
+            <SceneDisplay setText={setText} />
         </Display>
     )
 }

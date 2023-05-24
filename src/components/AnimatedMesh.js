@@ -3,7 +3,7 @@ import { Html } from '@react-three/drei';
 import { useState } from 'react';
 import styled from 'styled-components';
 
-export default function AnimatedMesh({mesh, name, coords}) {
+export default function AnimatedMesh({mesh, name, coords, setText}) {
     const [tipVisible, setTipVisible] = useState(false);
 
     const handlePointerOver = (event) => {
@@ -17,6 +17,7 @@ export default function AnimatedMesh({mesh, name, coords}) {
     };
     const handleClick = (event) => {
         console.log('Clicked', event.object);
+        setText(name)
     };
   
     return (
@@ -41,5 +42,5 @@ export default function AnimatedMesh({mesh, name, coords}) {
 const StyledText = styled.p`
     color: aliceblue;
     text-align: center;
-    
+    font-weight: 800;
 `;
