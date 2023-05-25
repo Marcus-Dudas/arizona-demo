@@ -3,11 +3,13 @@ import TextDisplay from './TextDisplay'
 import SceneDisplay from './SceneDisplay'
 import {useEffect, useState} from 'react'
 
-export default function DisplayBox () {
+
+
+export default function DisplayBox ({data}) {
     const [target, setTarget] = useState({name: null, text: null})
 
     const setText = (string) => {
-        setTarget(string)
+        setTarget(data[string])
     }
 
 

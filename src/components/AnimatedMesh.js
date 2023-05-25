@@ -3,9 +3,10 @@ import { Html } from '@react-three/drei';
 import { useState } from 'react';
 import styled from 'styled-components';
 
-export default function AnimatedMesh({mesh, name, coords, setText}) {
+export default function AnimatedMesh({mesh, name, coords, setText, setCamera}) {
     const [tipVisible, setTipVisible] = useState(false);
-
+    
+    //define function that transforms coords array for camera repositioning on click.
     const handlePointerOver = (event) => {
         event.stopPropagation();
         event.object.material.color.set(0xffa75e);
@@ -17,6 +18,7 @@ export default function AnimatedMesh({mesh, name, coords, setText}) {
     };
     const handleClick = (event) => {
         console.log('Clicked', event.object);
+        //setCamera()
         setText(name)
     };
   
