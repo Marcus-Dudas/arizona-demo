@@ -5,13 +5,13 @@ export default function TextDisplay ({target}) {
     const name = target.name || 'The Grand Canyon State'
     const text = target.text || (
                                 <p> 
-                                    Estimates from the U.S. census bureau place &nbsp; 
+                                    Estimates from the U.S. census bureau place around&nbsp; 
                                     <a href='https://www.census.gov/quickfacts/AZ' target='_blank' rel="noreferrer">
-                                    7.4 million residents &nbsp; 
+                                    7.4 million residents&nbsp; 
                                     </a>
                                     in the state of Arizona in 2022. Around 90 percent of them live in urban areas, according to a 2020&nbsp;
                                     <a href='https://crh.arizona.edu/sites/default/files/2022-03/20210702_AZ_BH_WorkforceReport_FINAL_0.pdf' target='_blank' rel="noreferrer">
-                                        analysis &nbsp; 
+                                        analysis&nbsp; 
                                     </a> 
                                     by the University of Arizona.<br/><br/>
                                     Go ahead and mess with the model. Drag, click, zoom, and explore 
@@ -47,20 +47,56 @@ const State = styled.h2`
     font-size: xx-large;
 `;
 const Text = styled.div`
-    width: 80%;
+    width: 95%;
+    height: 100%;
     color: white;
     text-decoration: none;
-    margin: 0;
-    padding: 10px;
+    margin: 1rem;
+    padding: 1rem;
     font-size: x-large;
     text-align: justify;
+    overflow-y: scroll;
+    overflow-x: hidden;
 
     & > p > a {
         color: #6ea5ff;
         text-decoration: none;
-        
+        &:visited {
+            color: #eb9234;
+        }
         &:hover {
             color: #ffe89c;
+            text-decoration: ;
         }
+        &:active {
+            color: red;
+          }
+    }
+    & > ul > li {
+        list-style: none;
+        margin-top: 3rem;
+    }
+
+    & > ul > li > a {
+        text-decoration: none;
+        padding: 1rem;
+        margin-top: 1rem;
+        border-radius: 5px;
+        border: 1px solid #6ea5ff;
+        color: #6ea5ff;
+        
+
+        &:visited {
+            color: #eb9234;
+            border: 1px solid #eb9234;
+        }
+        &:hover {
+            color: #ffe89c;
+            border: 1px solid #ffe89c;
+            text-decoration: ;
+        }
+        &:active {
+            color: red;
+          }
     }
 `;
