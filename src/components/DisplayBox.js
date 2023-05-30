@@ -29,5 +29,19 @@ const Display = styled.div`
     flex-direction: row;
     height: 80vh;
     width: 85vw;
-    justify-content: space-around;
+    justify-content: center;
+
+    @media (max-width: 1366px) {
+        flex-direction: row;
+        font-size: medium;
+    }
+
+    @media (max-width: 1024px) {
+        flex-direction: column-reverse;
+        font-size: medium;
+    }
+    @media (max-width: 767px) {
+        flex-direction: column-reverse;
+        font-size: xx-small;
+      }
 `;

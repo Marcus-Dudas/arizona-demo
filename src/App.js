@@ -1,4 +1,5 @@
-import './App.css'; //All child components are styled w/styled-components, though
+import './App.css';
+import styled from 'styled-components'
 import Navigation from './components/Navigation'
 import DisplayBox from './components/DisplayBox'
 import {data} from './data/countyDescriptions.js'
@@ -7,11 +8,29 @@ const navItems=[{title: 'About this app', url: null}, {title: 'Contact', url: nu
 
 export default function App() {
   return (
-    <div className="App">
+    <Layout className="App">
         <Navigation navItems={navItems}>Arizona Urbanizes</ Navigation>
         <DisplayBox data={data} />
-    </div>
+    </Layout>
   );
 }
 
+const Layout = styled.div`
+@media (max-width: 1366px) {
+  font-size: small;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
 
+@media (max-width: 1024px) {
+  font-size: x-small;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
+@media (max-width: 767px) {
+  font-size: xx-small;
+}
+`;

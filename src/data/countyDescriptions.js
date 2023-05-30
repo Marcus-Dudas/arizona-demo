@@ -86,9 +86,9 @@ export const data = {
                             In 2022, almost 6.4 million people are thought to have visited.</a>
                         </p>
                         <p>
-                            Also shared with Yavapai County, Sedona, which some believe is a&nbsp;
+                            Within county borders is much of the Sedona area, which some believe is a&nbsp;
                             <a href="https://www.thrillist.com/travel/nation/sedona-energy-vortexes-explained" target='_blank' rel="noreferrer">
-                            hot spot for psychic vortexes</a>, is a secondary pull for international tourism.
+                            hot spot for psychic vortexes</a>. Paired with psychedelic arts, Sedona acts as a secondary pull for international tourism.
                         </p>
                         <p>
                             Flagstaff is the seat of county governance and
@@ -102,7 +102,7 @@ export const data = {
                             Further reading:
                         </p>
                         <ul>
-                            <li><a href="https://www.doi.gov/blog/13-things-you-didnt-know-about-grand-canyon-national-park" target='_blank' rel="noreferrer">Grand Canyon Primer, U.S. Dept. of Interior</a></li>
+                            <li><a href="https://www.doi.gov/blog/13-things-you-didnt-know-about-grand-canyon-national-park" target='_blank' rel="noreferrer">Grand Canyon Primer</a></li>
                             <li><a href="http://www.sedonagalleryassociation.com/" target='_blank' rel="noreferrer">Sedona Gallery Association</a></li>
                             <li><a href="https://visitsedona.com/blog/getting-grounded-a-guide-to-sedonas-trails/" target='_blank' rel="noreferrer">Sedona Trail Guide</a></li>  
                         </ul>
@@ -138,9 +138,9 @@ export const data = {
         "text": ( <>
                             <p>
                                Graham county has Mount Graham, where the University of Arizona built the<a href="https://mgio.arizona.edu/" target='_blank' rel="noreferrer">
-                                &nbsp;Mount Graham International Observatory.</a>
+                                &nbsp;Mount Graham International Observatory. </a>
                                Though Arizona’s clear skies allow for great stargazing all year, Graham’s sparse 
-                               population, clear skies, and mountainous terrain make it an exceptionally 
+                               population, darker skies, and higher elevations make it an exceptionally 
                                good choice for astronomical observation. Still, environmental concerns and Native American interests make for
                                 <a href="https://sites.coloradocollege.edu/indigenoustraditions/sacred-lands/vatican-observatory-vs-san-carlos-apache-sacred-land/" target='_blank' rel="noreferrer">
                                 &nbsp;an interesting public debate</a> surrounding its placement.
@@ -164,8 +164,7 @@ export const data = {
                     <p>
                         The very fewest number of people live here of all of Arizona’s counties. Its largest town and county seat, Clifton, has around 2,5000 residents (according to 
                         <a href="https://www.co.greenlee.az.us/demographics/" target='_blank' rel="noreferrer">
-                        &nbsp;the county's site</a>). Not as warm as 
-                        other parts of Arizona, Greenlee exists for mining, and the local government knows it.
+                        &nbsp;the county's site</a>). Greenlee exists for mining, and the local government knows it.
                         <br/><br/>
                         Further reading:
                     </p>
@@ -202,21 +201,43 @@ export const data = {
     },
     "Maricopa": {
         "name": "Maricopa County",
-        "text": (
+        "text": (<>
                     <p>
-                        Better known as the place Phoenix is. Maricopa is the most populous county and is the seat of 
-                        county and state governance. Rather than a megalopolis, the greater Phoenix area is best described 
+                        Maricopa is the <a href="https://www.census.gov/quickfacts/maricopacountyarizona" target='_blank' rel="noreferrer">
+                        most populous county of Arizona</a>, with Phoenix as its seat of county and state governance.
+                        Rather than a megalopolis that is now the <a a href="https://www.azcentral.com/story/news/local/phoenix/2017/06/11/phoenix-nation-5th-largest-but-real-city/369917001/" target='_blank' rel="noreferrer">
+                        5th largest city in the U.S.</a>, the greater Phoenix area is best described 
                         as a mega-suburb where official city boundaries are, to the average person, useless. Surprise is 
                         Glendale is Chandler is Mesa. If you’re from the mega-burb, you’re from Phoenix, no questions asked, 
-                        even if it takes an hour of highways to get from one side to the other. Scottsdale, an enclave for 
-                        the rich, is the region’s oasis of luxury shoppping as well as a nexus of tech enterprise. Tempe, 
-                        home to the main campus of the largest university in the world, is a light-rail ride away from the 
-                        state capital, where a portion of its student population lives and studies. Corporations in Downtown 
-                        Phoenix draw 0000 commuters for the mega-burb every weekday. Freeport McMoran, The Arizona Republic, 
-                        and that one stadium I kind of loathe all power the regional economy. Dynamic, resilient, and growing
-                        year over year, Maricopa is the center of civilization in a desert so increasingly hot that air conditioning
-                        is now more like a necessity of functioning shelter, not a convenience.
+                        even if it takes an hour of highways to get from one side to the other. Dynamic, resilient, and growing
+                        year over year, Maricopa county is the center of civilization in a desert so increasingly hot that air conditioning
+                        is now more like a necessity of functioning shelter, not a convenience.</p>
+                    <p>
+                        Downtown 
+                        Phoenix, before the pandemic, drew in around <a href="https://www.azcentral.com/story/news/local/phoenix/2015/08/05/phoenix-transit-tax-prop-104-demographics/31111575/" target='_blank' rel="noreferrer">
+                        600,000 commuters every weekday</a>. Freeport McMoRan,
+                        Banner Health, Petsmart, the Bank of America, and other corporations power the regional economy. Like many downtown areas, a very small portion of people live there,
+                        and the bulk of its enormous workforce deals with heavy commuter traffic. Now, the post-pandemic collapse of the downtown office market is&nbsp;
+                        <a href="https://www.axios.com/local/phoenix/2023/04/10/office-amenities-work-from-home-2023-market-phoenix" target='_blank' rel="noreferrer">
+                        forcing real estate investors to adapt</a>.
                     </p>
+                    <p> Scottsdale, an enclave for 
+                        the rich, is the region’s oasis of luxury shopping as well as a nexus of tech enterprise.
+                        Famous for its many spas and gorgeous <a href="https://www.experiencescottsdale.com/itineraries/art-architecture-itinerary/" target='_blank' rel="noreferrer">
+                        modern architecture</a>, this strip of
+                        manicured desert puts North Phoenix on the map.
+                    </p>
+                    <p> 
+                        A light-rail ride south of Phoenix will bring you straight to Tempe, the sprawling half-city, half-campus of <a href="https://goglobal.asu.edu/international/about-asu-arizona" target='_blank' rel="noreferrer">
+                        Arizona State University</a>.
+                        With the largest student population in the U.S., ASU's 140,000 enrolled student population brings immense wealth to this desert outpost.
+                        <br/><br/>
+                                                Further reading:
+                    </p>
+                    <ul>
+                        <li><a href="https://gillespieshields.com/the-little-known-history-of-phoenix-arizona/" target='_blank' rel="noreferrer">History of Phoenix</a></li>
+                    </ul>
+                </>
                 )
     },
     "Mohave": {
@@ -227,13 +248,13 @@ export const data = {
                         Mojave</a> desert and people is this county's namesake, and part of the Grand Canyon National Park winds through it. 
                         Along with La Paz county, Mohave county benefits from Parker Dam, but indirectly through Havasu Lake. <a href="https://www.havasuchamber.com/community-profile.html" target='_blank' rel="noreferrer">
                         Lake Havasu</a> is a recreation 
-                        town with year-round warmth and the original London Bridge (from London, England).
+                        town with year-round warmth and, for some reason, the original London Bridge.
                     </p>
                     <p>
                         The lakes and watersport are a secondary benefit, as Parker Dam was bulit to service agriculture, with senior water rights held by local tribes that have recently agreed to sell them
-                        back to areas that need it most (see further reading). Those tribes were the first to irrigate the parched dirt made fertile from the region's geological history as <a href="https://en.wikipedia.org/wiki/Paleontology_in_Arizona" target='_blank' rel="noreferrer">
-                        a shallow sea</a>. Fertile as the land is,
-                        those tribes depend on Parker Dam so that it must remain at a particular level, meaning that Lake Havasu is always filled to the brim, unlike reservoirs much farther upstream.
+                        back to areas that need them most (see further reading). Those tribes were the first to irrigate the parched dirt made fertile by its past as <a href="https://en.wikipedia.org/wiki/Paleontology_in_Arizona" target='_blank' rel="noreferrer">
+                        a shallow sea</a>. The land is productive,
+                        but those tribes depend on Parker Dam, so its waters must remain level, meaning that Lake Havasu is always filled to the brim, unlike reservoirs much farther upstream.
                         <br/><br/>
                         Further reading:
                     </p>
@@ -253,8 +274,8 @@ export const data = {
                         Apache county collaborate heavily with the Navajo
                         county government, and sometimes they come into conflict,
                         <a href="https://www.pbs.org/newshour/politics/states-federal-government-want-supreme-court-to-end-navajo-fight-for-colorado-river-water" target='_blank' rel="noreferrer">
-                        &nbsp;bringing both to negotiate water rights</a> when many Navajo
-                        want but can't access running water, or to contest the legality of redistricting
+                        &nbsp;bringing both to negotiate water rights</a>. Now many Navajo
+                        want but can't access running water. In recent years, Navajo contested the legality of redistricting
                         meant to <a href="https://www.theguardian.com/us-news/2022/may/23/native-americans-arizona-redistricting-congressional-map" target='_blank' rel="noreferrer">
                         dilute the voting power of Navajo.</a>
                     </p>
@@ -284,19 +305,21 @@ export const data = {
         "name": "Pima County",
         "text": ( <>
                     <p>
-                        Best known for <a href="https://www.tucsonaz.gov/files/transportation/SurroundingCommunitiesProfiles/Tucson_2006.pdf" target='_blank' rel="noreferrer">
+                        This county is best known for <a href="https://www.tucsonaz.gov/files/transportation/SurroundingCommunitiesProfiles/Tucson_2006.pdf" target='_blank' rel="noreferrer">
                         Tucson</a>, a university town that transformed into a bustling urban center. Its wetter, cooler 
                         climate and active monsoon seasons keep its famous <a href="https://www.nps.gov/sagu/index.htm" target='_blank' rel="noreferrer">
-                            Saguaro National Park</a> a verdant cactus-green. The highly 
+                            Saguaro National Park</a> a lively cactus-green. The highly 
                         regarded <a href="https://www.arizona.edu/about" target='_blank' rel="noreferrer">
                         University of Arizona</a> sees its student population climbing local mountains, going out on the town, 
-                        and taking stock of its unique environment, bringing commerce and hip vibes to its many Sonoran eateries.
+                        and taking stock of its unique environment, bringing hip vibes to its many Sonoran eateries.
                     </p>
                     <p>
                         The University of Arizona invests heavily in its world-class astronomy and optics research, partnering with Gila county and multinational operations to 
-                        poise itself to lead a future space industry that has, so far, flown way under the radar. Still, the city's growth isn't enough to shed its reputaion as one of
+                        poise itself to lead a future space industry that has, so far, flown way under the radar. Still, the city's growth isn't enough to shed its reputation as one of
                         the <a href="https://tucson.com/news/local/tucson-on-list-of-worst-cities-to-live-in-america/article_d5144382-6fdd-11e8-bbc0-474ac863ea82.html" target='_blank' rel="noreferrer">
                         worst places to live in America</a>, even if you won't find any Tucsonian today who would bely that claim.
+                        <br/><br/>
+                               Further reading:
                     </p>
                     <ul>
                         <li><a href="https://en.wikipedia.org/wiki/Optics_Valley" target='_blank' rel="noreferrer">Tucson, the Optics Valley</a></li>  
@@ -311,8 +334,9 @@ export const data = {
                     <p>
                         Formed in <a href="http://genealogytrails.com/ariz/pinal/" target='_blank' rel="noreferrer">protest against the better known Maricopa and Pima counties</a>, Pinal county boasts agriculture and mining 
                         operations that support both. The agricultural activity of this region is heavily impacted by water scarcity,
-                        and longtime farmers have begun engaging with efforts to manage that precious resource to sustainably develop
-                        its fertile, if dry, lands.
+                        and longtime farmers have begun engaging with efforts to manage that precious resource to sustainably maintain its way of life.
+                        <br/><br/>
+                               Further reading:
                     </p>
                     <ul>
                         <li><a href="https://www.npr.org/2023/05/18/1176657700/arizona-farms-running-out-water-farmers-climate-change-colorado-river" target='_blank' rel="noreferrer">Farms run out of water, 2023</a></li>
@@ -329,6 +353,8 @@ export const data = {
                         Santa Cruz River</a>, the seat of county governance is the border town of Nogales.
                         As a port of entry between the U.S. and Mexico, the county and local governments of Santa Cruz are naturally 
                         involved in immigration activities.
+                        <br/><br/>
+                               Further reading:
                     </p>
                     <ul>
                         <li><a href="https://news.azpm.org/s/96685-migrants-line-up-at-nogales-port-of-entry-hoping-to-seek-asylum/" target='_blank' rel="noreferrer">Asylum seekers in Nogales</a></li> 
@@ -341,21 +367,37 @@ export const data = {
         "name": "Yavapai County",
         "text": ( <>
                     <p>
-                        Prescott Valley was the former capital of Arizona, so the county and Prescott do their best to preserve those historical sites. 
-                        Much of Sedona lies within county borders, as well as the city of Sedona. Hiking trails and unique wildlife welcome the nature-minded 
+                        Prescott Valley is the former capital of Arizona, <a href="https://www.prescott-az.gov/city-management/history/history-of-prescott/history-in-brief/" target='_blank' rel="noreferrer">
+                        founded in 1864. </a>
+                        Much of Sedona lies within county borders, including the <a href="https://www.sedonaaz.gov/" target='_blank' rel="noreferrer">
+                            city of Sedona</a>. Hiking trails and unique wildlife welcome the nature-minded 
                         visitor, but so do the bars and music venues Prescott is known for. Hip or just hippie, Prescott is a welcoming place.
+                        <br/><br/>
+                               Further reading:
                     </p>
+                    <ul>
+                        <li><a href="https://grcahistory.org/history/native-cultures/yavapai-apache/" target='_blank' rel="noreferrer">Yavapai Apache</a></li> 
+                        <li><a href="https://www.prescott.com/whiskey-row" target='_blank' rel="noreferrer">Whiskey Row</a></li>
+                    </ul>
                 </>
                 )
     },
     "Yuma": {
         "name": "Yuma County",
-        "text": (
+        "text": (<>
                     <p>
-                        Known for its territorial prison as well as the Kofa National Wildlife Refuge. It is the record-holder for the sunniest 
-                        place on Earth, which also makes managing water resources from the Colorado River crucial to sustaining its agricultural 
-                        activity. 
+                        The county seat is the city of Yuma. Known for its castle-like <a href="https://azstateparks.com/yuma-territorial" target='_blank' rel="noreferrer">
+                        territorial prison</a> as well as the <a href="https://www.fws.gov/refuge/kofa" target='_blank' rel="noreferrer">
+                        Kofa National Wildlife Refuge</a>. It is the record-holder for  
+                        <a  href="https://www.worldrecordacademy.org/2023/3/worlds-sunniest-place-world-record-in-yuma-arizona-423161" target='_blank' rel="noreferrer">
+                        &nbsp;the sunniest </a> place on Earth, which also makes managing water resources from the Colorado River crucial to yet another Arizonan county.
+                        <br/><br/>
+                               Further reading:
                     </p>
+                    <ul>
+                        <li><a href="https://www.yumacountyaz.gov/visitors/about-the-county" target='_blank' rel="noreferrer">A brief history of Yuma</a></li> 
+                    </ul>
+                </>
                 )
     }
 };

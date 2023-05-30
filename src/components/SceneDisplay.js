@@ -70,6 +70,18 @@ export default function SceneDisplay ({setText}) {
     )
 }
 const ThreeContainer = styled.div`
-    
     width: 60%;
+    height: 100%;
+
+    @media (max-width: 1366px) {
+        
+    }
+
+    @media (max-width: 1024px) {
+        
+    }
+    @media (max-width: 767px) {
+        width: 100%;
+        height: 70%;
+      }
 `;

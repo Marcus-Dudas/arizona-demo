@@ -58,4 +58,17 @@ const NavItem = styled.li`
     &:hover {
         color: #ffe89c;
     }}
+
+    @media (max-width: 1366px) {
+        font-size: medium;
+      }
+      
+      @media (max-width: 1024px) {
+        font-size: medium;
+        
+      }
+      
+      @media (max-width: 767px) {
+        font-size: medium;
+      }
 `;

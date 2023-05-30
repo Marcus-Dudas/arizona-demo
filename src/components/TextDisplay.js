@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 export default function TextDisplay ({target}) {
     const name = target.name || 'The Grand Canyon State'
-    const text = target.text || (
+    const text = target.text || (<>
                                 <p> 
                                     Estimates from the U.S. census bureau place around&nbsp; 
                                     <a href='https://www.census.gov/quickfacts/AZ' target='_blank' rel="noreferrer">
@@ -14,9 +14,10 @@ export default function TextDisplay ({target}) {
                                         analysis&nbsp; 
                                     </a> 
                                     by the University of Arizona.<br/><br/>
-                                    Go ahead and mess with the model. Drag, click, zoom, and explore 
+                                    Drag, click, zoom, and explore 
                                     the state's 15 counties.
                                 </p>
+                                </>
                                 )
     
     return(
@@ -38,6 +39,20 @@ const TextContainer = styled.div`
     margin: 0;
     padding: 0;
     align-items: center;
+
+    @media (max-width: 1366px) {
+        width: 50%;
+    }
+
+    @media (max-width: 1024px) {
+        width: 100%;
+        height:40%;
+    }
+    @media (max-width: 767px) {
+        font-size: xx-small;
+        width: 100%;
+        height:40%;
+      }
 `;
 const State = styled.h2`
     color: white;
@@ -45,9 +60,21 @@ const State = styled.h2`
     padding: 10px;
     padding-top: 20px;
     font-size: xx-large;
+
+    @media (max-width: 1366px) {
+        font-size: large;
+    }
+
+    @media (max-width: 1024px) {
+        font-size: medium;
+    }
+    @media (max-width: 767px) {
+        padding-top: 10px;
+        font-size: medium;
+      }
 `;
 const Text = styled.div`
-    width: 95%;
+    width: 90%;
     height: 100%;
     color: white;
     text-decoration: none;
@@ -99,4 +126,18 @@ const Text = styled.div`
             color: red;
           }
     }
+
+    @media (max-width: 1366px) {
+        font-size: large;
+        padding: 0px;
+    }
+
+    @media (max-width: 1024px) {
+        font-size: medium;
+        padding: 0px;
+    }
+    @media (max-width: 767px) {
+        font-size: small;
+        padding: 0px;
+      }
 `;
