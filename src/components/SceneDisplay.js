@@ -78,7 +78,7 @@ const ThreeContainer = styled.div`
     }
 
     @media (max-width: 1024px) {
-        
+        width: 100%;
     }
     @media (max-width: 767px) {
         width: 100%;
