@@ -1,4 +1,6 @@
 import styled from 'styled-components'
+import Stats from './Stats.js'
+import { Mdata } from '../data/countyMovement.js'
 
 
 export default function TextDisplay ({target}) {
@@ -23,6 +25,7 @@ export default function TextDisplay ({target}) {
     return(
         <TextContainer>
             <State>{name}</State>
+            <Stats countyName={Mdata[name]}/>
             <Text>{text}</Text>
         </TextContainer>
     )
@@ -57,7 +60,7 @@ const TextContainer = styled.div`
 const State = styled.h2`
     color: white;
     margin: 0;
-    padding: 10px;
+    padding: 0px;
     padding-top: 20px;
     font-size: xx-large;
 
@@ -80,6 +83,7 @@ const Text = styled.div`
     text-decoration: none;
     margin: 1rem;
     padding: 1rem;
+    padding-top: 0px;
     font-size: x-large;
     text-align: justify;
     overflow-y: scroll;
@@ -137,7 +141,7 @@ const Text = styled.div`
         padding: 0px;
     }
     @media (max-width: 767px) {
-        font-size: small;
+        font-size: x-small;
         padding: 0px;
       }
 `;

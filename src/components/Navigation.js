@@ -69,6 +69,6 @@ const NavItem = styled.li`
       }
       
       @media (max-width: 767px) {
-        font-size: medium;
+        font-size: small;
       }
 `;
