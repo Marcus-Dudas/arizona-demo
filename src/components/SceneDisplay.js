@@ -7,8 +7,14 @@ import AnimatedMesh from './AnimatedMesh'
 
 
 
-export default function SceneDisplay ({setText}) {
+export default function SceneDisplay ({setText, target}) {
+    const [camera, setCamera] = useState([0, 40, 3])
     const {nodes} = useGLTF('/models/Arizona.glb', true)
+
+    const handleCamera = (coords) => {
+        //const cameraCoords = [transX(coords[0]), transY(coords[1]), transz(coords[2])]
+        //setCamera(cameraCoords)
+    }
     
     //this iterates through object nodes and replaces them with copies to unbind meshes from each other so that pointer effects are confined to the mesh interacted with, not the entire group.
     for (let nodeName in nodes) {
@@ -16,13 +22,14 @@ export default function SceneDisplay ({setText}) {
             nodes[nodeName].material = nodes[nodeName].material.clone()
         }};
 
+    //NOTICE: Animated Mesh props are growing
     return(
         <ThreeContainer>
             <Suspense fallback={'Loading models...'}>
                 <Canvas>
                     <PerspectiveCamera
                         makeDefault={true}
-                        position={[0, 40, 3]}
+                        position={camera}
                         fov={60}
                         near={0.1}
                         far={1000}  />
@@ -48,21 +55,21 @@ export default function SceneDisplay ({setText}) {
                         attenuation={50}
                         anglePower={80}
                     />
-                    <AnimatedMesh mesh={nodes.Apache} name={"Apache"} coords={[11.5,3,-6]} setText={setText} />
-                    <AnimatedMesh mesh={nodes.Cochise} name={"Cochise"} coords={[10,3,12]} setText={setText} />
-                    <AnimatedMesh mesh={nodes.Navajo} name={"Navajo"} coords={[7,3,-4]} setText={setText} />
-                    <AnimatedMesh mesh={nodes.Maricopa} name={"Maricopa"} coords={[-5,3,5]} setText={setText} />
-                    <AnimatedMesh mesh={nodes.Coconino} name={"Coconino"} coords={[1,3,-10]} setText={setText} />
-                    <AnimatedMesh mesh={nodes.Gila} name={"Gila"} coords={[5,3,1]} setText={setText} />
-                    <AnimatedMesh mesh={nodes.Yavapai} name={"Yavapai"} coords={[-5,3,-3]} setText={setText} />
-                    <AnimatedMesh mesh={nodes.Greenlee} name={"Greenlee"} coords={[12.5,3,4]} setText={setText} />
-                    <AnimatedMesh mesh={nodes.Graham} name={"Graham"} coords={[10,3,7]} setText={setText} />
-                    <AnimatedMesh mesh={nodes.LaPaz} name={"La Paz"} coords={[-9,3,1]} setText={setText} />
-                    <AnimatedMesh mesh={nodes.Pinal} name={"Pinal"} coords={[2,3,7]} setText={setText} />
-                    <AnimatedMesh mesh={nodes.Yuma} name={"Yuma"} coords={[-9,3,8]} setText={setText} />
-                    <AnimatedMesh mesh={nodes.Pima} name={"Pima"} coords={[4,3,10]} setText={setText} />
-                    <AnimatedMesh mesh={nodes.SantaCruz} name={"Santa Cruz"} coords={[5.7,3,14]} setText={setText} />
-                    <AnimatedMesh mesh={nodes.Mohave} name={"Mohave"} coords={[-10.5,3,-7]} setText={setText} />
+                    <AnimatedMesh mesh={nodes.Apache} name={"Apache"} coords={[11.5,3,-6]} setText={setText} handleCamera={handleCamera} target={target} />
+                    <AnimatedMesh mesh={nodes.Cochise} name={"Cochise"} coords={[10,3,12]} setText={setText} handleCamera={handleCamera} target={target} />
+                    <AnimatedMesh mesh={nodes.Navajo} name={"Navajo"} coords={[7,3,-4]} setText={setText} handleCamera={handleCamera} target={target} />
+                    <AnimatedMesh mesh={nodes.Maricopa} name={"Maricopa"} coords={[-5,3,5]} setText={setText} handleCamera={handleCamera} target={target} />
+                    <AnimatedMesh mesh={nodes.Coconino} name={"Coconino"} coords={[1,3,-10]} setText={setText} handleCamera={handleCamera} target={target} />
+                    <AnimatedMesh mesh={nodes.Gila} name={"Gila"} coords={[5,3,1]} setText={setText} handleCamera={handleCamera} target={target} />
+                    <AnimatedMesh mesh={nodes.Yavapai} name={"Yavapai"} coords={[-5,3,-3]} setText={setText} handleCamera={handleCamera} target={target} />
+                    <AnimatedMesh mesh={nodes.Greenlee} name={"Greenlee"} coords={[12.5,3,4]} setText={setText} handleCamera={handleCamera} target={target} />
+                    <AnimatedMesh mesh={nodes.Graham} name={"Graham"} coords={[10,3,7]} setText={setText} handleCamera={handleCamera} target={target} />
+                    <AnimatedMesh mesh={nodes.LaPaz} name={"La Paz"} coords={[-9,3,1]} setText={setText} handleCamera={handleCamera} target={target} />
+                    <AnimatedMesh mesh={nodes.Pinal} name={"Pinal"} coords={[2,3,7]} setText={setText} handleCamera={handleCamera} target={target} />
+                    <AnimatedMesh mesh={nodes.Yuma} name={"Yuma"} coords={[-9,3,8]} setText={setText} handleCamera={handleCamera} target={target} />
+                    <AnimatedMesh mesh={nodes.Pima} name={"Pima"} coords={[4,3,10]} setText={setText} handleCamera={handleCamera} target={target} />
+                    <AnimatedMesh mesh={nodes.SantaCruz} name={"Santa Cruz"} coords={[5.7,3,14]} setText={setText} handleCamera={handleCamera} target={target} />
+                    <AnimatedMesh mesh={nodes.Mohave} name={"Mohave"} coords={[-10.5,3,-7]} setText={setText} handleCamera={handleCamera} target={target} />
 
                 </Canvas>
             </Suspense>
@@ -85,3 +92,15 @@ const ThreeContainer = styled.div`
         height: 70%;
       }
 `;
+
+//camera transformation helpers:
+
+const transformX = (coord) =>{
+    return (coord)
+}
+const transformY = (coord) =>{
+    return (coord)
+}
+const transformZ = (coord) =>{
+    return (coord)
+}

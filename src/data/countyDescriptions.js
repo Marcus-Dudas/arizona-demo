@@ -3,6 +3,26 @@
 //This is why CMSs exist. Find out how to manage these without hard-coding JSX.
 
 export const data = {
+    "Arizona":{
+        "name": "The Grand Canyon State",
+        "text": (
+                    <>
+                        <p> 
+                            Estimates from the U.S. census bureau place around&nbsp; 
+                            <a href='https://www.census.gov/quickfacts/AZ' target='_blank' rel="noreferrer">
+                            7.4 million residents&nbsp; 
+                            </a>
+                            in the state of Arizona in 2022. Around 90 percent of them live in urban areas, according to a 2020&nbsp;
+                            <a href='https://crh.arizona.edu/sites/default/files/2022-03/20210702_AZ_BH_WorkforceReport_FINAL_0.pdf' target='_blank' rel="noreferrer">
+                            analysis&nbsp; 
+                            </a> 
+                            by the University of Arizona.<br/><br/>
+                            Drag, click, zoom, and explore 
+                            the state's 15 counties.
+                        </p>
+                    </>
+        )
+    },
     "Apache": {
         "name": "Apache County",
         "text": (

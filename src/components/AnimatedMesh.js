@@ -1,27 +1,52 @@
 import { useSpring, animated } from 'react-spring';
 import { Html } from '@react-three/drei';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import styled from 'styled-components';
 
-export default function AnimatedMesh({mesh, name, coords, setText, setCamera}) {
+export default function AnimatedMesh({mesh, name, coords, setText, handleCamera, target}) {
     const [tipVisible, setTipVisible] = useState(false);
+    const [selected, setSelected] = useState(false)
+    console.log(`[${target.name}] === [${name} County]`, target.name === `${name} County`);
+    //at time of render, selection via handleClick does not cause re-render.
+    //This calls for useEffect() for selected state changes
+
+    useEffect( ()=>{
+        showSelection(target)
+    }, [target]
+    )
+
+    const showSelection = (target) =>{
+        //asynchronicity preventing truthy outcome
+        if((target.name) === (`${name} County`)) {
+            setSelected(true)
+        } else {
+            setSelected(false)
+            mesh.material.color.set(0xf5e7c1)
+        }
+        console.log('Selected? ', selected)
+    }
     
-    //define function that transforms coords array for camera repositioning on click.
     const handlePointerOver = (event) => {
         event.stopPropagation();
-        event.object.material.color.set(0xffa75e);
+        if (!selected) {
+            event.object.material.color.set(0xffa75e)
+        }
         setTipVisible(true);
     };
     const handlePointerOut = (event) => {
-        event.object.material.color.set(0xf5e7c1);
+        if (!selected){
+        event.object.material.color.set(0xf5e7c1)
+        }
         setTipVisible(false);
     };
     const handleClick = (event) => {
-        console.log('Clicked', event.object);
-        //setCamera()
+        //console.log('Clicked', event.object);
+        
+        //handleCamera(coords)
         setText(name)
     };
-  
+    
+
     return (
         <>
             <primitive 

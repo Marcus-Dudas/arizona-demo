@@ -6,7 +6,7 @@ import {useEffect, useState} from 'react'
 
 
 export default function DisplayBox ({data}) {
-    const [target, setTarget] = useState({name: null, text: null})
+    const [target, setTarget] = useState(data.Arizona)
 
     const setText = (string) => {
         setTarget(data[string])
@@ -14,11 +14,11 @@ export default function DisplayBox ({data}) {
 
 
 
-
+//provisional solution: passing target back down all the way to SceneDisplay and AnimatedMesh so all are aware of current selection
     return(
         <Display>
             <TextDisplay target={target} />
-            <SceneDisplay setText={setText} />
+            <SceneDisplay setText={setText} target={target} />
         </Display>
     )
 }
