@@ -4,7 +4,7 @@ import Navigation from './components/Navigation'
 import DisplayBox from './components/DisplayBox'
 import {data} from './data/countyDescriptions.js'
 
-const navItems=[{title: 'About this app', url: null}, {title: 'Contact', url: null}]
+const navItems=[{title: 'About this app', url: null}]
 
 export default function App() {
   return (

@@ -6,17 +6,9 @@ import styled from 'styled-components';
 export default function AnimatedMesh({mesh, name, coords, setText, handleCamera, target}) {
     const [tipVisible, setTipVisible] = useState(false);
     const [selected, setSelected] = useState(false)
-    console.log(`[${target.name}] === [${name} County]`, target.name === `${name} County`);
-    //at time of render, selection via handleClick does not cause re-render.
-    //This calls for useEffect() for selected state changes
-
-    useEffect( ()=>{
-        showSelection(target)
-    }, [target]
-    )
-
     const showSelection = (target) =>{
-        //asynchronicity preventing truthy outcome
+        //render order seems to have prevented truthy outcome so added to above useEffect()
+        //each mesh is recieving prop and evaluating whether it is selected.
         if((target.name) === (`${name} County`)) {
             setSelected(true)
         } else {
@@ -25,7 +17,6 @@ export default function AnimatedMesh({mesh, name, coords, setText, handleCamera,
         }
         console.log('Selected? ', selected)
     }
-    
     const handlePointerOver = (event) => {
         event.stopPropagation();
         if (!selected) {
@@ -40,12 +31,14 @@ export default function AnimatedMesh({mesh, name, coords, setText, handleCamera,
         setTipVisible(false);
     };
     const handleClick = (event) => {
-        //console.log('Clicked', event.object);
-        
         //handleCamera(coords)
         setText(name)
     };
     
+    useEffect( ()=>{
+        showSelection(target)
+    }, [target]
+    )
 
     return (
         <>

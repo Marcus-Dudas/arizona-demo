@@ -4,6 +4,7 @@ import { Canvas} from '@react-three/fiber'
 import { OrbitControls, PerspectiveCamera, useGLTF, SpotLight} from '@react-three/drei'
 import { Suspense, useState} from 'react'
 import AnimatedMesh from './AnimatedMesh'
+import LandmarkOverlay from './LandmarkOverlay'
 
 
 
@@ -55,6 +56,7 @@ export default function SceneDisplay ({setText, target}) {
                         attenuation={50}
                         anglePower={80}
                     />
+                    <LandmarkOverlay />
                     <AnimatedMesh mesh={nodes.Apache} name={"Apache"} coords={[11.5,3,-6]} setText={setText} handleCamera={handleCamera} target={target} />
                     <AnimatedMesh mesh={nodes.Cochise} name={"Cochise"} coords={[10,3,12]} setText={setText} handleCamera={handleCamera} target={target} />
                     <AnimatedMesh mesh={nodes.Navajo} name={"Navajo"} coords={[7,3,-4]} setText={setText} handleCamera={handleCamera} target={target} />
