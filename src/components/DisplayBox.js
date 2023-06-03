@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import TextDisplay from './TextDisplay'
 import SceneDisplay from './SceneDisplay'
 import {useEffect, useState} from 'react'
+import OverlayOptions from './OverlayOptions'
 
 
 
@@ -18,6 +19,7 @@ export default function DisplayBox ({data}) {
     return(
         <Display>
             <TextDisplay target={target} />
+            <OverlayOptions />
             <SceneDisplay setText={setText} target={target} />
         </Display>
     )

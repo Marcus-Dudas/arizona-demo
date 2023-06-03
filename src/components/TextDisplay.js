@@ -22,7 +22,7 @@ const TextContainer = styled.div`
     border-radius: 5px;
     display: flex;
     flex-direction: column;
-    width: 35%;
+    width: 30%;
     height: 100%;
     margin: 0;
     padding: 0;

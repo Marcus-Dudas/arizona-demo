@@ -79,7 +79,7 @@ export default function SceneDisplay ({setText, target}) {
     )
 }
 const ThreeContainer = styled.div`
-    width: 60%;
+    width: 55%;
     height: 100%;
 
     @media (max-width: 1366px) {
