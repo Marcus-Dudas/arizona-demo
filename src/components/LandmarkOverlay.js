@@ -29,6 +29,7 @@ export default function LandmarkOverlay () {
                 <Landmark position={[20, 5, 4]}>Phoenix</Landmark>
                 <Landmark position={[20, 5, 4]}>Quartzsite</Landmark>
                 <Landmark position={[20, 5, 4]}>Lake Havasu</Landmark>
+                <Landmark position={[20, 5, 4]}>Sedona</Landmark>
                 <Landmark position={[20, 5, 4]}>St. John's</Landmark>
                 <Landmark position={[20, 5, 4]}>Bisbee</Landmark>
                 <Landmark position={[20, 5, 4]}>Flagstaff</Landmark>
