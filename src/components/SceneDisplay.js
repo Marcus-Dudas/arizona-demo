@@ -2,16 +2,17 @@ import styled from 'styled-components'
 
 import { Canvas} from '@react-three/fiber'
 import { OrbitControls, PerspectiveCamera, useGLTF, SpotLight} from '@react-three/drei'
-import { Suspense, useState} from 'react'
+import { Suspense, useState, useEffect} from 'react'
 import AnimatedMesh from './AnimatedMesh'
 import LandmarkOverlay from './LandmarkOverlay'
 
 
 
-export default function SceneDisplay ({setText, target}) {
-    const [camera, setCamera] = useState([0, 40, 3])
-    const {nodes} = useGLTF('/models/Arizona.glb', true)
 
+export default function SceneDisplay ({setText, target, visibility}) {
+    const [camera, setCamera] = useState([0, 40, 3]) // extracted from PerspectiveCamera for coordinate translations
+    const {nodes} = useGLTF('/models/Arizona.glb', true)
+    const [visible, setVisible] = useState(null) //this is an über janky fix to prevent meshes from being caught up in overlay re-renders/ first renders.
     const handleCamera = (coords) => {
         //const cameraCoords = [transX(coords[0]), transY(coords[1]), transz(coords[2])]
         //setCamera(cameraCoords)
@@ -22,7 +23,9 @@ export default function SceneDisplay ({setText, target}) {
         if (nodes[nodeName].material) {
             nodes[nodeName].material = nodes[nodeName].material.clone()
         }};
-
+    useEffect(()=>{
+        setVisible(visibility)
+    }, [visibility])
     //NOTICE: Animated Mesh props are growing
     return(
         <ThreeContainer>
@@ -56,7 +59,8 @@ export default function SceneDisplay ({setText, target}) {
                         attenuation={50}
                         anglePower={80}
                     />
-                    <LandmarkOverlay />
+                    <LandmarkOverlay visibility={visible} />
+                    <RegionsOverlay visibility={visible}/>
                     <AnimatedMesh mesh={nodes.Apache} name={"Apache"} coords={[11.5,3,-6]} setText={setText} handleCamera={handleCamera} target={target} />
                     <AnimatedMesh mesh={nodes.Cochise} name={"Cochise"} coords={[10, 3, 11]} setText={setText} handleCamera={handleCamera} target={target} />
                     <AnimatedMesh mesh={nodes.Navajo} name={"Navajo"} coords={[7, 3, -7]} setText={setText} handleCamera={handleCamera} target={target} />

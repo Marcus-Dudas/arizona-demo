@@ -5,7 +5,7 @@ import {Border, MapLabel, Interstate, Landmark} from './graphicHelpers';
 
 //wild. Way easier and probably nicer to have drawn much of this out on a plane in Blender.
 // c is prop for color property
-export default function LandmarkOverlay () {
+export default function LandmarkOverlay ({visibility}) {
     const ic1= 'red';
     const ic2= 'purple';
     const ic3 = 'blue';
@@ -13,6 +13,7 @@ export default function LandmarkOverlay () {
     const ic5 = 'green';
     const st = '#6ea5ff';
     const b = '#eb9234';
+    if (visibility.Places){
     return (
         <>
             <Plane args={[75, 75]} position={[0, 2, 0]} rotation={[-Math.PI / 2, 0, 0]}>
@@ -83,5 +84,7 @@ export default function LandmarkOverlay () {
                 
             </Plane>
         </>
-    )
+    )} else {
+        return
+    }
 }

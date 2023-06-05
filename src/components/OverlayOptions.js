@@ -1,7 +1,7 @@
 import styled from "styled-components"
 import {useState} from 'react'
 
-export default function OverlayOptions () {
+export default function OverlayOptions ({handleOvButton}) {
     const [selected, setSelected] = useState({
         'Places': false,
         'Climate': false,
@@ -9,6 +9,7 @@ export default function OverlayOptions () {
     });
 
     const handleClick = (label) =>{
+        handleOvButton(label)
         setSelected(prevState => ({
             ...prevState,
             [label]: !prevState[label]

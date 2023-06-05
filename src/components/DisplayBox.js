@@ -8,9 +8,20 @@ import OverlayOptions from './OverlayOptions'
 
 export default function DisplayBox ({data}) {
     const [target, setTarget] = useState(data.Arizona)
-
+    const [visibility, setVisibility] = useState({
+        'Places': false,
+        'Climate': false,
+        'Movement': false,
+    })
+    //rename: passText? until context implemented
     const setText = (string) => {
         setTarget(data[string])
+    }
+    const handleOvButton = (label) =>{
+        setVisibility(prevState => ({
+            ...prevState,
+            [label]: !prevState[label]
+        }))
     }
 
 
@@ -19,8 +30,8 @@ export default function DisplayBox ({data}) {
     return(
         <Display>
             <TextDisplay target={target} />
-            <OverlayOptions />
-            <SceneDisplay setText={setText} target={target} />
+            <OverlayOptions handleOvButton={handleOvButton}/>
+            <SceneDisplay setText={setText} target={target} visibility={visibility} handleOvButton={handleOvButton} />
         </Display>
     )
 }
