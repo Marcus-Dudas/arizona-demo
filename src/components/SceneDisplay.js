@@ -5,13 +5,14 @@ import { OrbitControls, PerspectiveCamera, useGLTF, SpotLight} from '@react-thre
 import { Suspense, useState, useEffect} from 'react'
 import AnimatedMesh from './AnimatedMesh'
 import LandmarkOverlay from './LandmarkOverlay'
-
+import RegionsOverlay from './RegionsOverlay'
 
 
 
 export default function SceneDisplay ({setText, target, visibility}) {
     const [camera, setCamera] = useState([0, 40, 3]) // extracted from PerspectiveCamera for coordinate translations
     const {nodes} = useGLTF('/models/Arizona.glb', true)
+    const {nodes: regionNodes} = useGLTF('models/regions.glb', true)
     const [visible, setVisible] = useState(null) //this is an über janky fix to prevent meshes from being caught up in overlay re-renders/ first renders.
     const handleCamera = (coords) => {
         //const cameraCoords = [transX(coords[0]), transY(coords[1]), transz(coords[2])]
@@ -60,7 +61,7 @@ export default function SceneDisplay ({setText, target, visibility}) {
                         anglePower={80}
                     />
                     <LandmarkOverlay visibility={visible} />
-                    <RegionsOverlay visibility={visible}/>
+                    <RegionsOverlay visibility={visible} model={regionNodes} texture={regionNodes.regionstex}/>
                     <AnimatedMesh mesh={nodes.Apache} name={"Apache"} coords={[11.5,3,-6]} setText={setText} handleCamera={handleCamera} target={target} />
                     <AnimatedMesh mesh={nodes.Cochise} name={"Cochise"} coords={[10, 3, 11]} setText={setText} handleCamera={handleCamera} target={target} />
                     <AnimatedMesh mesh={nodes.Navajo} name={"Navajo"} coords={[7, 3, -7]} setText={setText} handleCamera={handleCamera} target={target} />
