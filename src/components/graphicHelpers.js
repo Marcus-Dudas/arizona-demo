@@ -60,7 +60,7 @@ export const Interstate = ({ start, stop, apex, c='aliceblue' }) => {
             const material = new LineBasicMaterial({ color: c });
             setLineObject(new Line(geometry, material));
         }
-    }, [start, stop, apex]);  // useEffect dependency array
+    }, [start, stop, apex]);
 
     return lineObject && <primitive object={lineObject} />;
 };
@@ -69,12 +69,9 @@ export const Interstate = ({ start, stop, apex, c='aliceblue' }) => {
 //or position prop can be translation prop and coordinate declaration can be more visually useful during creation. Chose latter.
 // OH boy. there are plane buffer geometries that have an easier time rendering faces between vertices, but this is a Blender job for a real project.
 // This only works with three triplet (XYZ) coordinates to make triangular faces.
-//Keep, but Blender model was used in place of giant arrays of vertices
 export const Zone = ({translateXYZ, coordArr, ...props}) => {
-    
     const vertices = new Float32Array(coordArr);
     const translatedVertices = vertices.map((value, index) => value + translateXYZ[index % 3]);
-    // Create a BufferGeometry and set the attribute 'position' to be the vertices
     const geometry = new THREE.BufferGeometry();
     geometry.setAttribute('position', new THREE.BufferAttribute(new Float32Array(translatedVertices), 3));
   

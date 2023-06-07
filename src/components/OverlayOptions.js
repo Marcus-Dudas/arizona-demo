@@ -3,8 +3,10 @@ import {useState} from 'react'
 
 export default function OverlayOptions ({handleOvButton}) {
     const [selected, setSelected] = useState({
-        'Places': false,
-        'Climate': false,
+        'Cities': false,
+        'Reservations': false,
+        'Interstates': false,
+        'States': false,
         'Movement': false,
     });
 
@@ -18,8 +20,10 @@ export default function OverlayOptions ({handleOvButton}) {
 
     return(
         <ButtonDiv>
-            <OvButton onClick={() => handleClick('Places')} selected={selected['Places']}>Places</OvButton>
-            <OvButton onClick={() => handleClick('Climate')} selected={selected['Climate']}>Regions</OvButton>
+            <OvButton onClick={() => handleClick('Cities')} selected={selected['Cities']}>Cities</OvButton>
+            <OvButton onClick={() => handleClick('Reservations')} selected={selected['Reservations']}>Reservations</OvButton>
+            <OvButton onClick={() => handleClick('Interstates')} selected={selected['Interstates']}>Interstates</OvButton>
+            <OvButton onClick={() => handleClick('States')} selected={selected['States']}>States</OvButton>
             <OvButton onClick={() => handleClick('Movement')} selected={selected['Movement']}>Movement</OvButton>
         </ButtonDiv>
     )
@@ -43,15 +47,18 @@ const ButtonDiv = styled.div`
     margin-top: 0px;
 
     @media (max-width: 1366px) {
-        flex-direction: row;
+        height:10%;
+        flex-direction: column;
         justify-content: space-around;
     }
 
     @media (max-width: 1024px) {
+        height:10%;
         flex-direction: row;
         justify-content: space-around;
     }
     @media (max-width: 767px) {
+        height:10%;
         flex-direction: row;
         justify-content: space-around;
       }
@@ -61,35 +68,37 @@ const Button = styled.button`
     all: unset;
     margin-bottom: 1rem;
     font-weight: 700;
-    width: 5rem;
-    height:5rem;
+    min-height: 3rem;
     border: 1px solid #95fcf2;
-    border-radius: 50%;
+    
     color: ${props => props.selected ? 'gray' : 'aliceblue'};
     background-color: ${props => props.selected ? '#ffe89c' : 'none'};
 
     &: hover{
-        color: #6ea5ff;
-        background-color: #ffe89c;
+        color: #eb9234;
+        background-color: rgba(255, 255, 255, .25);
     }
 
     @media (max-width: 1366px) {
         margin:0;
+        margin-bottom: 0rem;
         margin-right: 1rem;
-        width: 3rem;
-        height:3rem;
+        width: 7rem;
+        min-height:3rem;
     }
 
     @media (max-width: 1024px) {
         margin:0;
+        margin-bottom: 0rem;
         margin-right: 1rem;
-        width: 3rem;
-        height:3rem;
+        width: 7rem;
+        min-height:3rem;
     }
     @media (max-width: 767px) {
         margin:0;
+        margin-bottom: 0rem;
         margin-right: 1rem;
-        width: 3rem;
+        width: 4rem;
         height:3rem;
       }
 `;

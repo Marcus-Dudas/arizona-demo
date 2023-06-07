@@ -4,16 +4,17 @@ import { Canvas} from '@react-three/fiber'
 import { OrbitControls, PerspectiveCamera, useGLTF, SpotLight} from '@react-three/drei'
 import { Suspense, useState, useEffect} from 'react'
 import AnimatedMesh from './AnimatedMesh'
-import LandmarkOverlay from './LandmarkOverlay'
-import RegionsOverlay from './RegionsOverlay'
+import CitiesOverlay from './CitiesOverlay'
+import ResOverlay from './ResOverlay'
+import StatesOverlay from './StatesOverlay'
+import InterstateOverlay from './InterstateOverlay'
 
 
 
 export default function SceneDisplay ({setText, target, visibility}) {
     const [camera, setCamera] = useState([0, 40, 3]) // extracted from PerspectiveCamera for coordinate translations
     const {nodes} = useGLTF('/models/Arizona.glb', true)
-    const {nodes: regionNodes} = useGLTF('models/regions.glb', true)
-    const [visible, setVisible] = useState(null) //this is an über janky fix to prevent meshes from being caught up in overlay re-renders/ first renders.
+    const [visible, setVisible] = useState(null) //paired with useEff. this is an über quick fix to prevent meshes from being caught up in overlay re-renders/ first renders.
     const handleCamera = (coords) => {
         //const cameraCoords = [transX(coords[0]), transY(coords[1]), transz(coords[2])]
         //setCamera(cameraCoords)
@@ -60,23 +61,25 @@ export default function SceneDisplay ({setText, target, visibility}) {
                         attenuation={50}
                         anglePower={80}
                     />
-                    <LandmarkOverlay visibility={visible} />
-                    <RegionsOverlay visibility={visible} model={regionNodes} texture={regionNodes.regionstex}/>
-                    <AnimatedMesh mesh={nodes.Apache} name={"Apache"} coords={[11.5,3,-6]} setText={setText} handleCamera={handleCamera} target={target} />
-                    <AnimatedMesh mesh={nodes.Cochise} name={"Cochise"} coords={[10, 3, 11]} setText={setText} handleCamera={handleCamera} target={target} />
-                    <AnimatedMesh mesh={nodes.Navajo} name={"Navajo"} coords={[7, 3, -7]} setText={setText} handleCamera={handleCamera} target={target} />
-                    <AnimatedMesh mesh={nodes.Maricopa} name={"Maricopa"} coords={[-5,3,5]} setText={setText} handleCamera={handleCamera} target={target} />
-                    <AnimatedMesh mesh={nodes.Coconino} name={"Coconino"} coords={[1,3,-10]} setText={setText} handleCamera={handleCamera} target={target} />
-                    <AnimatedMesh mesh={nodes.Gila} name={"Gila"} coords={[5,3,1]} setText={setText} handleCamera={handleCamera} target={target} />
-                    <AnimatedMesh mesh={nodes.Yavapai} name={"Yavapai"} coords={[-5,3,-2]} setText={setText} handleCamera={handleCamera} target={target} />
-                    <AnimatedMesh mesh={nodes.Greenlee} name={"Greenlee"} coords={[12.5, 3, 3]} setText={setText} handleCamera={handleCamera} target={target} />
-                    <AnimatedMesh mesh={nodes.Graham} name={"Graham"} coords={[8.5, 3, 5]} setText={setText} handleCamera={handleCamera} target={target} />
-                    <AnimatedMesh mesh={nodes.LaPaz} name={"La Paz"} coords={[-8.3,3, -.5]} setText={setText} handleCamera={handleCamera} target={target} />
-                    <AnimatedMesh mesh={nodes.Pinal} name={"Pinal"} coords={[2,3,7]} setText={setText} handleCamera={handleCamera} target={target} />
-                    <AnimatedMesh mesh={nodes.Yuma} name={"Yuma"} coords={[-9,3,8]} setText={setText} handleCamera={handleCamera} target={target} />
-                    <AnimatedMesh mesh={nodes.Pima} name={"Pima"} coords={[2,3,11]} setText={setText} handleCamera={handleCamera} target={target} />
-                    <AnimatedMesh mesh={nodes.SantaCruz} name={"Santa Cruz"} coords={[4.2, 3, 13.15]} setText={setText} handleCamera={handleCamera} target={target} />
-                    <AnimatedMesh mesh={nodes.Mohave} name={"Mohave"} coords={[-10.5,3,-9]} setText={setText} handleCamera={handleCamera} target={target} />
+                    <CitiesOverlay visibility={visible} />
+                    <ResOverlay visibility={visible}/>
+                    <StatesOverlay visibility={visible} />
+                    <InterstateOverlay visibility={visible} />
+                    <AnimatedMesh mesh={nodes.Apache} name={"Apache"} coords={[11.5,3,-6]} setText={setText} handleCamera={handleCamera} target={target} visibility={visible} gain={false}/>
+                    <AnimatedMesh mesh={nodes.Cochise} name={"Cochise"} coords={[10, 3, 11]} setText={setText} handleCamera={handleCamera} target={target} visibility={visible} gain={false} />
+                    <AnimatedMesh mesh={nodes.Navajo} name={"Navajo"} coords={[7, 3, -7]} setText={setText} handleCamera={handleCamera} target={target} visibility={visible} gain={false}/>
+                    <AnimatedMesh mesh={nodes.Maricopa} name={"Maricopa"} coords={[-5,3,5]} setText={setText} handleCamera={handleCamera} target={target} visibility={visible} gain={true}/>
+                    <AnimatedMesh mesh={nodes.Coconino} name={"Coconino"} coords={[1,3,-10]} setText={setText} handleCamera={handleCamera} target={target} visibility={visible} gain={true}/>
+                    <AnimatedMesh mesh={nodes.Gila} name={"Gila"} coords={[5,3,1]} setText={setText} handleCamera={handleCamera} visibility={visible} target={target} gain={false} />
+                    <AnimatedMesh mesh={nodes.Yavapai} name={"Yavapai"} coords={[-5,3,-2]} setText={setText} handleCamera={handleCamera} target={target} visibility={visible} gain={true}/>
+                    <AnimatedMesh mesh={nodes.Greenlee} name={"Greenlee"} coords={[12.5, 3, 3]} setText={setText} handleCamera={handleCamera} target={target} visibility={visible} gain={true}/>
+                    <AnimatedMesh mesh={nodes.Graham} name={"Graham"} coords={[8.5, 3, 5]} setText={setText} handleCamera={handleCamera} target={target} visibility={visible} gain={true}/>
+                    <AnimatedMesh mesh={nodes.LaPaz} name={"La Paz"} coords={[-8.3,3, -.5]} setText={setText} handleCamera={handleCamera} target={target} visibility={visible} gain={false}/>
+                    <AnimatedMesh mesh={nodes.Pinal} name={"Pinal"} coords={[2,3,7]} setText={setText} handleCamera={handleCamera} target={target} visibility={visible} gain={true}/>
+                    <AnimatedMesh mesh={nodes.Yuma} name={"Yuma"} coords={[-9,3,8]} setText={setText} handleCamera={handleCamera} target={target} visibility={visible} gain={true}/>
+                    <AnimatedMesh mesh={nodes.Pima} name={"Pima"} coords={[2,3,11]} setText={setText} handleCamera={handleCamera} target={target} visibility={visible} gain={true}/>
+                    <AnimatedMesh mesh={nodes.SantaCruz} name={"Santa Cruz"} coords={[4.2, 3, 13.15]} setText={setText} handleCamera={handleCamera} target={target} visibility={visible} gain={true}/>
+                    <AnimatedMesh mesh={nodes.Mohave} name={"Mohave"} coords={[-10.5,3,-9]} setText={setText} handleCamera={handleCamera} target={target} visibility={visible} gain={true}/>
 
                 </Canvas>
             </Suspense>

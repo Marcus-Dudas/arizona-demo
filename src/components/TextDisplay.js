@@ -30,6 +30,7 @@ const TextContainer = styled.div`
 
     @media (max-width: 1366px) {
         width: 50%;
+        margin: 0;
     }
 
     @media (max-width: 1024px) {

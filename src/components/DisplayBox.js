@@ -9,8 +9,10 @@ import OverlayOptions from './OverlayOptions'
 export default function DisplayBox ({data}) {
     const [target, setTarget] = useState(data.Arizona)
     const [visibility, setVisibility] = useState({
-        'Places': false,
-        'Climate': false,
+        'Cities': false,
+        'Reservations': false,
+        'Interstates': false,
+        'States': false,
         'Movement': false,
     })
     //rename: passText? until context implemented
@@ -47,6 +49,7 @@ const Display = styled.div`
     @media (max-width: 1366px) {
         flex-direction: row;
         font-size: medium;
+        align-items: center;
     }
 
     @media (max-width: 1024px) {

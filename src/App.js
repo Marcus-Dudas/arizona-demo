@@ -16,6 +16,12 @@ export default function App() {
 }
 
 const Layout = styled.div`
+@media (aspect-ratio: 1/1) {
+  font-size: small;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
 @media (max-width: 1366px) {
   font-size: small;
   display: flex;

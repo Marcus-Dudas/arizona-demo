@@ -189,7 +189,7 @@ export const data = {
                         Further reading:
                     </p>
                     <ul>
-                    <li><a href="https://static.azdeq.gov/pn/app_fmmorenci_dp.pdf" target='_blank' rel="noreferrer">ADEQ amends mining permit to protect groundwater</a></li>
+                    <li><a href="https://static.azdeq.gov/pn/app_fmmorenci_dp.pdf" target='_blank' rel="noreferrer">ADEQ protects wells</a></li>
                     </ul>
                 </>
                 )
@@ -332,6 +332,11 @@ export const data = {
                         regarded <a href="https://www.arizona.edu/about" target='_blank' rel="noreferrer">
                         University of Arizona</a> sees its student population climbing local mountains, going out on the town, 
                         and taking stock of its unique environment, bringing hip vibes to its many Sonoran eateries.
+                    </p>
+                    <p>
+                        Much of Pima county's Western portion is within the <a href="http://www.tonation-nsn.gov/tohono-oodham-history/" target='_blank' rel="noreferrer">
+                            Tohono O'Odham Nation's Reservation</a>. The total land area of this reservation nears the size of Connecticut and is where 
+                        the Hohokam people irrigated land and migrated through to nearby mountain dwellings in the hotter months.
                     </p>
                     <p>
                         The University of Arizona invests heavily in its world-class astronomy and optics research, partnering with Gila county and multinational operations to 
