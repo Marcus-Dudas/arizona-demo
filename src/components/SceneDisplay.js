@@ -15,12 +15,6 @@ export default function SceneDisplay ({setText, target, visibility}) {
     const [camera, setCamera] = useState([0, 40, 3]) // extracted from PerspectiveCamera for coordinate translations
     const {nodes} = useGLTF('/models/Arizona.glb', true)
     const [visible, setVisible] = useState(null) //paired with useEff. this is an über quick fix to prevent meshes from being caught up in overlay re-renders.
-    const handleCanvasClick = (event) => {
-        // If the event is not stopped, no mesh was clicked
-        if (!event.isPropagationStopped()) {
-            setText('Arizona');
-        }
-    };
 
     const handleCamera = (coords) => {
         //const cameraCoords = [transX(coords[0]), transY(coords[1]), transz(coords[2])]
@@ -39,7 +33,7 @@ export default function SceneDisplay ({setText, target, visibility}) {
     return(
         <ThreeContainer>
             <Suspense fallback={'Loading models...'}>
-                <Canvas onPointerDown={handleCanvasClick}>
+                <Canvas>
                     <PerspectiveCamera
                         makeDefault={true}
                         position={camera}

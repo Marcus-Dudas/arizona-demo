@@ -15,13 +15,15 @@ export default function AnimatedMesh({mesh, name, coords, setText, handleCamera,
             setSelected(true)
         } else {
             setSelected(false)
-            mesh.material.color.set(0xf5e7c1)
+            mesh.material.color.set(pOut)
         }
     }
 
     const handlePointerOver = (event) => {
         event.stopPropagation();
         if (!selected) {
+            event.object.material.color.set(0xffa75e)
+        } else if (selected) {
             event.object.material.color.set(0xffa75e)
         }
         setTipVisible(true);
@@ -47,8 +49,10 @@ export default function AnimatedMesh({mesh, name, coords, setText, handleCamera,
     useEffect(() => {
         if (visibility.Movement) {
             mesh.material.color.set(net);
-        } else {
+        } else if (!selected) {
             mesh.material.color.set(0xf5e7c1);
+        } else if (selected) {
+            mesh.material.color.set(0xffa75e);
         }
     }, [visibility]); 
 
