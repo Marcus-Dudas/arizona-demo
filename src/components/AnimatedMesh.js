@@ -18,6 +18,7 @@ export default function AnimatedMesh({mesh, name, coords, setText, handleCamera,
             mesh.material.color.set(0xf5e7c1)
         }
     }
+
     const handlePointerOver = (event) => {
         event.stopPropagation();
         if (!selected) {
@@ -26,12 +27,14 @@ export default function AnimatedMesh({mesh, name, coords, setText, handleCamera,
         setTipVisible(true);
     };
     const handlePointerOut = (event) => {
+        event.stopPropagation();
         if (!selected){
         event.object.material.color.set(pOut)
         }
         setTipVisible(false);
     };
     const handleClick = (event) => {
+        event.stopPropagation();
         //handleCamera(coords)
         setText(name)
     };

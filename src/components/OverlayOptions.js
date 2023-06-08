@@ -95,9 +95,10 @@ const Button = styled.button`
         min-height:3rem;
     }
     @media (max-width: 767px) {
+        font-size: xx-small;
         margin:0;
         margin-bottom: 0rem;
-        margin-right: 1rem;
+        margin-right: .5rem;
         width: 4rem;
         height:3rem;
       }
