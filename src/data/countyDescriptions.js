@@ -73,7 +73,7 @@ export const data = {
                                 and mining-town turned artist-refuge&nbsp;
                                 <a href="https://www.azcommerce.com/a/profiles/ViewProfile/32/Bisbee/" target='_blank' rel="noreferrer">
                                 Bisbee</a>
-                                , the county htrives as a modern tourist destination.
+                                , the county thrives as a modern tourist destination.
                             </p>
                             <p>
                                 Originally settled for silver, copper, and gold, Bisbee's Copper Queen  
@@ -99,7 +99,7 @@ export const data = {
                     <>
                         <p>
                             Coconino county is best known for its natural beauty.
-                            Much of the Grand Canyon National park is located in its Northwest,
+                            Much of the Grand Canyon National park is located in its northwest,
                             where every year more tourists are received to look over one of the
                             world’s seven natural wonders. <a href="https://www.nps.gov/grca/learn/management/statistics.htm" target='_blank' rel="noreferrer">
                             In 2022, there were almost 6.4 million estimated visitors.</a>
@@ -107,11 +107,11 @@ export const data = {
                         <p>
                             Within county borders is much of the Sedona area, which some believe is a&nbsp;
                             <a href="https://www.thrillist.com/travel/nation/sedona-energy-vortexes-explained" target='_blank' rel="noreferrer">
-                            hot spot for psychic vortexes</a>. Between psychism and its psychedelic art scene, Sedona acts as a secondary pull for international tourism.
+                            hot spot for psychic vortexes</a>. Between psychism and its psychedelic art scene, the city of Sedona acts as a secondary pull for international tourism.
                         </p>
                         <p>
                             Flagstaff is the seat of county governance and
-                            host to Northern Arizona University. The city sits atop a mountain due North 
+                            host to Northern Arizona University. The city sits atop a mountain due north 
                             of Phoenix- the drive showcasing desert, chaparral, and mountain ecologies.
                             &nbsp;Already known for its environmental studies programs thanks to its proximity to such varied environments,
                             Northern Arizona University recently <a href="https://news.nau.edu/nsf-research-rankings-2021/" target='_blank' rel="noreferrer">
@@ -228,8 +228,8 @@ export const data = {
                         5th largest city in the U.S.</a>, the greater Phoenix area is best described 
                         as a mega-suburb where official city boundaries are nearly invisible. If you’re from the mega-burb, you’re from Phoenix, no questions asked, 
                         even if it takes an hour of highways to get from one side to the other. Dynamic, resilient, and growing
-                        year over year, Maricopa county is the center of civilization in a desert so increasingly hot that Phoenix sponsors<a href="https://www.phoenix.gov/heat/resources/heatsafety">
-                        cooling stations and enforces renter's rights to cool air</a>.</p>
+                        year over year, Maricopa county is the center of civilization in a desert so increasingly hot that Phoenix sponsors public<a href="https://www.phoenix.gov/heat/resources/heatsafety">
+                        &nbsp;cooling stations and enforces renter's rights good A/C</a>.</p>
                     <p>
                         Downtown 
                         Phoenix saw <a href="https://www.azcentral.com/story/news/local/phoenix/2015/08/05/phoenix-transit-tax-prop-104-demographics/31111575/" target='_blank' rel="noreferrer">
@@ -243,7 +243,7 @@ export const data = {
                         the rich, is the region’s oasis of luxury shopping as well as a nexus of tech enterprise.
                         Famous for its many spas and gorgeous <a href="https://www.experiencescottsdale.com/itineraries/art-architecture-itinerary/" target='_blank' rel="noreferrer">
                         modern architecture</a>, this strip of
-                        manicured desert puts the North Phoenix metro on the map.
+                        manicured desert puts North Phoenix on the map.
                     </p>
                     <p> 
                         A light-rail ride south of Phoenix will bring you straight to Tempe, the sprawling half-city, half-campus of <a href="https://goglobal.asu.edu/international/about-asu-arizona" target='_blank' rel="noreferrer">
@@ -263,8 +263,8 @@ export const data = {
         "text": (<>
                     <p>
                         The <a href="https://mdhca.org/mojave-versus-mohave" target='_blank' rel="noreferrer">
-                        Mojave</a> desert and people is this county's namesake. Part of the Grand Canyon National Park winds through it. 
-                        Along with La Paz county, Mohave county benefits from Parker Dam, but indirectly through Havasu Lake. <a href="https://www.havasuchamber.com/community-profile.html" target='_blank' rel="noreferrer">
+                        Mojave</a> desert and people is this county's namesake. Along with a portion of The Grand Canyon, the Colorado River winds through this county so that, 
+                        along with La Paz, Mohave benefits from Parker Dam indirectly through Havasu Lake. <a href="https://www.havasuchamber.com/community-profile.html" target='_blank' rel="noreferrer">
                         Lake Havasu</a> is a recreation 
                         town with year-round warmth and the original London Bridge.
                     </p>
@@ -293,7 +293,7 @@ export const data = {
                         <a href="https://www.pbs.org/newshour/politics/states-federal-government-want-supreme-court-to-end-navajo-fight-for-colorado-river-water" target='_blank' rel="noreferrer">
                         &nbsp;Like other parts of the lowland deserts, water is scarce here, and populations must find ways to share</a>. In recent years, the politically active Navajo have contested the legality of redistricting
                         that would <a href="https://www.theguardian.com/us-news/2022/may/23/native-americans-arizona-redistricting-congressional-map" target='_blank' rel="noreferrer">
-                        dilute the voting power.</a>
+                        dilute their voting power.</a>
                     </p>
                     <p>
                         Shared with Apache county, the Petrified Forest National Park 
@@ -304,8 +304,8 @@ export const data = {
                     </p>
                     <p>
                         Navajo county sits squarely (or rectangularly) on the
-                        Colorado plateau, where temperatures are milder but the land 
-                        is no less punishing, just like its Eastern neighbor.
+                        Colorado Plateau, where temperatures are milder but the land 
+                        is no less punishing.
                         <br/><br/>
                                Further reading:
                     </p>
@@ -327,12 +327,12 @@ export const data = {
                             Saguaro National Park</a> a lively cactus-green. The highly 
                         regarded <a href="https://www.arizona.edu/about" target='_blank' rel="noreferrer">
                         University of Arizona</a> hosts a large student population you will find climbing local mountains, 
-                        taking stock of wild life for class credit, or otherwise bringin hip vibes to Tucson's many Sonoran eateries.
+                        taking stock of wild life for class credit, or otherwise bringin' hip vibes to Tucson's many Sonoran eateries.
                     </p>
                     <p>
-                        Much of Pima county's Western portion is within the <a href="http://www.tonation-nsn.gov/tohono-oodham-history/" target='_blank' rel="noreferrer">
+                        Much of Pima county's western portion is within the <a href="http://www.tonation-nsn.gov/tohono-oodham-history/" target='_blank' rel="noreferrer">
                         Tohono O'Odham Nation's Reservation</a>. The total land area of this reservation nears that of Connecticut and is where 
-                        the Hohokam people historically irrigated land and crossed to reach nearby mountain dwellings for warm Summers.
+                        the Hohokam people historically irrigated land and crossed to reach nearby mountain dwellings.
                     </p>
                     <p>
                         The University of Arizona invests heavily in its world-class astronomy and optics research, partnering with Gila county and multinational operations to 
@@ -372,7 +372,7 @@ export const data = {
                     <p>
                         Named for the <a href="https://www.tucsonaz.gov/water/SCRHP-history" target='_blank' rel="noreferrer">
                         Santa Cruz River</a>, the seat of county governance is the border town of Nogales.
-                        As a port of entry between the U.S. and Mexico, the county and local governments of Santa Cruz are naturally 
+                        Nogales serving a port of entry between the U.S. and Mexico, the county and local governments of Santa Cruz are naturally 
                         involved in immigration activities.
                         <br/><br/>
                                Further reading:
