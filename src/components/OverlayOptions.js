@@ -71,8 +71,8 @@ const Button = styled.button`
     min-height: 3rem;
     border: 1px solid #95fcf2;
     
-    color: ${props => props.selected ? 'gray' : 'aliceblue'};
-    background-color: ${props => props.selected ? '#ffe89c' : 'none'};
+    color: ${props => props.selected ? 'navyblue' : 'aliceblue'};
+    background-color: ${props => props.selected ? 'aliceblue' : 'none'};
 
     &: hover{
         color: #eb9234;

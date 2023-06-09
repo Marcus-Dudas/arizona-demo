@@ -4,12 +4,12 @@ import Navigation from './components/Navigation'
 import DisplayBox from './components/DisplayBox'
 import {data} from './data/countyDescriptions.js'
 
-const navItems=[{title: 'About this app', url: null}]
+const navItems=[{title: 'About', url: null}] //Next.js url paths.
 
 export default function App() {
   return (
     <Layout className="App">
-        <Navigation navItems={navItems}>Arizona Urbanizes</ Navigation>
+        <Navigation navItems={navItems}>AZ in 3D</ Navigation>
         <DisplayBox data={data} />
     </Layout>
   );

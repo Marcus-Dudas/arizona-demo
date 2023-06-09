@@ -1,67 +1,67 @@
 export const Mdata = {
     "Arizona":{
-        'in': 11,
-        'out': 22,
+        'change': 8.49,
+        'population': 7453517,
     },
     "Apache County": {
-        "in": 1,
-        "out": 2,
+        'change': -9.99,
+        'population':64371,
     },
     "Cochise County": {
-        "in": 3,
-        "out": 4,
+        'change': -5.84,
+        'population':123677,
     },
     "Coconino County": {
-        "in": 5,
-        "out": 6,
+        'change': 10.33,
+        'population':148305,
     },
     "Gila County": {
-        "in": 7,
-        "out": 8,
+        'change': -0.79,
+        'population': 53176,
     },
     "Graham County": {
-        "in": 9,
-        "out": 10,
+        'change': 4.58,
+        'population':38926,
     },
     "Greenlee County": {
-        "in": 11,
-        "out": 12, 
+        'change': 17.36,
+        'population': 9902,
     },
     "La Paz County": {
-        "in": 13,
-        "out": 14,
+        'change': -24.95,
+        'population': 15378,
     },
     "Maricopa County": {
-        "in": 15,
-        "out": 16,
+        'change': 20.55,
+        'population':4601603,
     },
     "Mohave County": {
-        "in": 17,
-        "out": 18,
+        'change': 8.49,
+        'population':217191,
     },
     "Navajo County": {
-        "in": 19,
-        "out": 20,
+        'change': -0.89,
+        'population':106498,
     },
     "Pima County": {
-        "in": 21,
-        "out": 22,
+        'change': 8.38,
+        'population':1062384,
     },
     "Pinal County": {
-        "in": 23,
-        "out": 24,
+        'change': 17.12,
+        'population':440111,
     },
     "Santa Cruz County": {
-        "in": 25,
-        "out": 26,
+        'change': 0.68,
+        'population': 47744,
     },
     "Yavapai County": {
-        "in": 27,
-        "out": 28,
+        'change': 15.51,
+        'population': 243763,
     },
     "Yuma County": {
-        "in": 29,
-        "out": 30, 
+        'change': 5.4,
+        'population':206320, 
     },
 };
 

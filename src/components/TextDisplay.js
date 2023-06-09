@@ -6,11 +6,22 @@ import { Mdata } from '../data/countyMovement.js'
 export default function TextDisplay ({target}) {
     const name = target.name || 'Error'
     const text = target.text || 'Try refreshing'
-    
+    const net = (name) => {
+        if (Mdata[name]?.change > 0) {
+            return '#32a852'
+        } else {
+            return '#a83e32'
+        }
+    }
+    const dataExists = Mdata[name];
+    const change = dataExists ? `${Mdata[name].change.toFixed(2)}%` : '';
+    //TODO: format with css, not non breaking spaces, sheesh
     return(
         <TextContainer>
-            <State>{name}</State>
-            <Stats countyName={Mdata[name]}/>
+            <State net={net(name)}>
+                <h2>{name}</h2>&nbsp;&nbsp;
+                <p>{change}</p>
+            </State>
             <Text>{text}</Text>
         </TextContainer>
     )
@@ -27,10 +38,10 @@ const TextContainer = styled.div`
     margin: 0;
     padding: 0;
     align-items: center;
-
+      
     @media (max-width: 1366px) {
         width: 50%;
-        height: 40%;
+        height: 60%;
         margin: 0;
     }
 
@@ -44,24 +55,51 @@ const TextContainer = styled.div`
         height:40%;
       }
 `;
-const State = styled.h2`
+const State = styled.div`
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
     color: white;
     margin: 0;
     padding: 0px;
     padding-top: 20px;
-    font-size: xx-large;
+
+    h2, p {
+        font-size: 2em;  // you can adjust the font size as needed
+    }
+    p{
+        font-size: 1rem;
+        color: ${({ net }) => net}; // use the net prop here
+    }
 
     @media (max-width: 1366px) {
-        font-size: large;
+        h2, p {
+            font-size: 1rem;
+        }
+        p{
+            font-size: 1rem
+        }
     }
 
     @media (max-width: 1024px) {
-        font-size: medium;
+        h2, p {
+            font-size: 1rem;
+        }
+        p{
+            font-size: 1rem
+        }
     }
+
     @media (max-width: 767px) {
         padding-top: 10px;
-        font-size: medium;
-      }
+        h2, p {
+            font-size: 1rem;
+        }
+        p{
+            font-size: .5rem
+        }
+    }
 `;
 const Text = styled.div`
     width: 90%;
@@ -75,6 +113,17 @@ const Text = styled.div`
     text-align: justify;
     overflow-y: scroll;
     overflow-x: hidden;
+    ::-webkit-scrollbar {
+        width: 6px;               /
+    }
+    ::-webkit-scrollbar-track {
+        background: navyblue;        
+    }
+    ::-webkit-scrollbar-thumb {
+        background-color: navyblue;    
+        border-radius: 20px;       
+        border: 1px solid #95fcf2;
+    }
 
     & > p > a {
         color: #6ea5ff;
