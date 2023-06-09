@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import Stats from './Stats.js'
+
 import { Mdata } from '../data/countyMovement.js'
 
 
