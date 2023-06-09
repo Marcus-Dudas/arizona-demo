@@ -5,7 +5,7 @@ This is an interactive informational for the state of Arizona, with 3D elements.
 ![Screenshot](image.png)
 # Description
 
-Blender was used to make 3D models. Three.js, react-three-fiber, and supprting libraries like fiber/drei were used to integrate and animate models. The result is a responsive, interactive 3D representation of Arizona where users can manipulate the scene by clicking on counties and toggling contextual overlays. It's just a learning project for 3D modeling and associated frontend development.
+Blender was used to make 3D models. Three.js, react-three-fiber, and supporting libraries like fiber/drei were used to integrate and animate models. The result is a responsive, interactive 3D representation of Arizona where users can manipulate the scene by clicking on counties and toggling contextual overlays. It's just a learning project for 3D modeling and associated frontend development.
 
 # Technology 
 
