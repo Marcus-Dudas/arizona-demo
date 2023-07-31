@@ -142,6 +142,10 @@ const Text = styled.div`
     & > ul > li {
         list-style: none;
         margin-top: 3rem;
+        @media (max-width: 767px) {
+            padding: .5rem;
+            margin: .5rem;
+          }
     }
 
     & > ul > li > a {
@@ -165,6 +169,11 @@ const Text = styled.div`
         &:active {
             color: red;
           }
+          @media (max-width: 767px) {
+            font-size: x-small;
+            padding: .25rem;
+            margin: .25rem;
+          }
     }
 
     @media (max-width: 1366px) {
@@ -179,5 +188,6 @@ const Text = styled.div`
     @media (max-width: 767px) {
         font-size: x-small;
         padding: 0px;
+        margin: 0;
       }
 `;

@@ -229,7 +229,7 @@ export const data = {
                         as a mega-suburb where official city boundaries are nearly invisible. If you’re from the mega-burb, you’re from Phoenix, no questions asked, 
                         even if it takes an hour of highways to get from one side to the other. Dynamic, resilient, and growing
                         year over year, Maricopa county is the center of civilization in a desert so increasingly hot that Phoenix sponsors public<a href="https://www.phoenix.gov/heat/resources/heatsafety">
-                        &nbsp;cooling stations and enforces renter's rights good A/C</a>.</p>
+                        &nbsp;cooling stations and enforces renter's rights to good A/C</a>.</p>
                     <p>
                         Downtown 
                         Phoenix saw <a href="https://www.azcentral.com/story/news/local/phoenix/2015/08/05/phoenix-transit-tax-prop-104-demographics/31111575/" target='_blank' rel="noreferrer">
@@ -263,15 +263,15 @@ export const data = {
         "text": (<>
                     <p>
                         The <a href="https://mdhca.org/mojave-versus-mohave" target='_blank' rel="noreferrer">
-                        Mojave</a> desert and people is this county's namesake. Along with a portion of The Grand Canyon, the Colorado River winds through this county so that, 
+                        Mojave</a> desert and people are this county's namesake. Along with a portion of The Grand Canyon, the Colorado River winds through this county so that, 
                         along with La Paz, Mohave benefits from Parker Dam indirectly through Havasu Lake. <a href="https://www.havasuchamber.com/community-profile.html" target='_blank' rel="noreferrer">
                         Lake Havasu</a> is a recreation 
-                        town with year-round warmth and the original London Bridge.
+                        town on Havasu Lake with year-round warmth and the original London Bridge.
                     </p>
                     <p>
-                        The lake and watersport tourism are a secondary benefit, as Parker Dam was bulit to service agriculture, with senior water rights held by local tribes. Those tribes agree to sell rights
+                        The lake and watersport tourism are a secondary benefit, as Parker Dam was built to service agriculture, with senior water rights held by local tribes. Those tribes agree to sell rights
                         back to areas that need them most (see further reading), using what they get to irrigate the parched dirt made fertile by the region's past as <a href="https://en.wikipedia.org/wiki/Paleontology_in_Arizona" target='_blank' rel="noreferrer">
-                        a shallow sea</a>. Agriculture in the area relies on Parker Dam, so its waters must remain level, meaning that Lake Havasu is always filled to the brim and ready to ride, unlike reservoirs farther upstream.
+                        a shallow sea</a>. Agriculture in the area relies on Parker Dam, so its waters must remain level, meaning that Havasu Lake is always filled to the brim and ready to ride, unlike reservoirs farther upstream.
                         <br/><br/>
                         Further reading:
                     </p>
@@ -293,7 +293,7 @@ export const data = {
                         <a href="https://www.pbs.org/newshour/politics/states-federal-government-want-supreme-court-to-end-navajo-fight-for-colorado-river-water" target='_blank' rel="noreferrer">
                         &nbsp;Like other parts of the lowland deserts, water is scarce here, and populations must find ways to share</a>. In recent years, the politically active Navajo have contested the legality of redistricting
                         that would <a href="https://www.theguardian.com/us-news/2022/may/23/native-americans-arizona-redistricting-congressional-map" target='_blank' rel="noreferrer">
-                        dilute their voting power.</a>
+                        dilute their voting power and lessen their influence on these kinds of issues.</a>
                     </p>
                     <p>
                         Shared with Apache county, the Petrified Forest National Park 
@@ -355,7 +355,7 @@ export const data = {
                     <p>
                         Formed from <a href="http://genealogytrails.com/ariz/pinal/" target='_blank' rel="noreferrer"> the better known Maricopa and Pima counties</a>, Pinal county boasts agriculture and mining 
                         operations that support both. The agricultural activity of this region is heavily impacted by water scarcity,
-                        and longtime farmers have begun engaging with efforts to manage that precious resource.
+                        and long-time farmers have begun engaging with efforts to manage that precious resource.
                         <br/><br/>
                                Further reading:
                     </p>
@@ -372,7 +372,7 @@ export const data = {
                     <p>
                         Named for the <a href="https://www.tucsonaz.gov/water/SCRHP-history" target='_blank' rel="noreferrer">
                         Santa Cruz River</a>, the seat of county governance is the border town of Nogales.
-                        Nogales serving a port of entry between the U.S. and Mexico, the county and local governments of Santa Cruz are naturally 
+                        Nogales serving as a port of entry between the U.S. and Mexico, the county and local governments of Santa Cruz are naturally 
                         involved in immigration activities.
                         <br/><br/>
                                Further reading:
@@ -391,7 +391,7 @@ export const data = {
                         Prescott Valley is the former capital of Arizona, <a href="https://www.prescott-az.gov/city-management/history/history-of-prescott/history-in-brief/" target='_blank' rel="noreferrer">
                         founded in 1864. </a>
                         Much of Sedona lies within county borders, including the <a href="https://www.sedonaaz.gov/" target='_blank' rel="noreferrer">
-                            city of Sedona</a>. Hiking trails and unique wildlife welcome the nature-minded 
+                            city of Sedona</a>. Hiking trails and unique ecologies welcome the nature-minded 
                         visitor, but so do the bars and music venues Prescott is known for. Hip or just hippie, Prescott is a welcoming place.
                         <br/><br/>
                                Further reading:

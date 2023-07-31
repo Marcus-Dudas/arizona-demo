@@ -58,9 +58,10 @@ const ButtonDiv = styled.div`
         justify-content: space-around;
     }
     @media (max-width: 767px) {
-        height:10%;
+        height:7%;
+        width: 95%;
         flex-direction: row;
-        justify-content: space-around;
+        justify-content: space-between;
       }
 `;
 
@@ -98,8 +99,7 @@ const Button = styled.button`
         font-size: xx-small;
         margin:0;
         margin-bottom: 0rem;
-        margin-right: .5rem;
-        width: 4rem;
-        height:3rem;
+        margin-right: .4rem;
+        width: 3.5rem;
       }
 `;
