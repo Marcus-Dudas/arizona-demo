@@ -109,7 +109,7 @@ const Text = styled.div`
     margin: 1rem;
     padding: 1rem;
     padding-top: 0px;
-    font-size: x-large;
+    font-size: large;
     text-align: justify;
     overflow-y: scroll;
     overflow-x: hidden;
@@ -141,6 +141,7 @@ const Text = styled.div`
     }
     & > ul > li {
         list-style: none;
+        font-size: normal;
         margin-top: 3rem;
         @media (max-width: 767px) {
             padding: .5rem;
@@ -151,6 +152,7 @@ const Text = styled.div`
     & > ul > li > a {
         text-decoration: none;
         padding: 1rem;
+        font-size: 1rem;
         margin-top: 1rem;
         border-radius: 5px;
         border: 1px solid #6ea5ff;
