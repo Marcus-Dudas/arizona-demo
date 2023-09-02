@@ -5,9 +5,9 @@ export default function Navigation ({navItems, children}) {
     const links = composeNavLinks(navItems);
     return(
         <NavBar>
-            <SiteName>{children}</SiteName>
+            <SiteName onClick={()=>{window.location.reload()}}>{children}</SiteName>
             <NavLinks>
-                {links}
+                <span style={{visibility: 'hidden'}}>{links}</span>
             </NavLinks>
         </NavBar>
     )
