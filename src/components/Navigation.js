@@ -35,7 +35,10 @@ const NavBar = styled.div`
     justify-content: space-between;
 `;
 const SiteName = styled.h1`
-    font-family: Palatino, sans-serif;
+    font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    margin: 0;
     color: #95fcf2;
 `;
 const NavLinks = styled.ul`

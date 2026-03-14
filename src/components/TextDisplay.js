@@ -30,7 +30,7 @@ export default function TextDisplay ({target}) {
 //styles
 const TextContainer = styled.div`
     border: 1px solid #95fcf2;
-    border-radius: 5px;
+    border-radius: 15px;
     display: flex;
     flex-direction: column;
     width: 30%;
