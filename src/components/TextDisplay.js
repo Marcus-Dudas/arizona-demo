@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import textdecal from '../img/textangles.png'
 
 import { Mdata } from '../data/countyMovement.js'
 
@@ -29,8 +30,14 @@ export default function TextDisplay ({target}) {
 
 //styles
 const TextContainer = styled.div`
-    border: 1px solid #95fcf2;
-    border-radius: 15px;
+    background-image: url(${textdecal});
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    border-left: 1px solid #95fcf2;
+    border-right: 1px solid #95fcf2;
+    border-radius: 0 0 15px 15px;
     display: flex;
     flex-direction: column;
     width: 30%;
@@ -103,8 +110,9 @@ const State = styled.div`
 `;
 const Text = styled.div`
     width: 90%;
-    height: 100%;
+    height: 90%;
     color: white;
+    text-shadow: 1px 1px 1px black;
     text-decoration: none;
     margin: 1rem;
     padding: 1rem;
@@ -151,8 +159,11 @@ const Text = styled.div`
 
     & > ul > li > a {
         text-decoration: none;
+        text-shadow: 1px 1px 6px black;
+        background-color: rgba(124, 110, 64, 0.75);
         padding: 1rem;
         font-size: 1rem;
+        font-weight: 700;
         margin-top: 1rem;
         border-radius: 5px;
         border: 1px solid #6ea5ff;
