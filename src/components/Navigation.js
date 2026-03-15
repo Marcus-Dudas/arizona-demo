@@ -56,6 +56,7 @@ const Decal = styled.img`
 position: absolute;  
 z-index: -1;
 border-radius: 0px 0px 10px 10px;
+filter: saturate(160%);
 flex: 1;
   height: 100%;
   width: 60%;

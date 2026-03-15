@@ -30,10 +30,10 @@ export default function TextDisplay ({target}) {
 
 //styles
 const TextContainer = styled.div`
-    background-image: url(${textdecal});
+      background-image: url(${textdecal});
     background-size: cover;
-    background-position: center;
     background-repeat: no-repeat;
+    filter: saturate(160%) contrast(105%);
 
     border-left: 1px solid #95fcf2;
     border-right: 1px solid #95fcf2;
