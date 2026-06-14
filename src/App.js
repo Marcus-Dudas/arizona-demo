@@ -4,7 +4,7 @@ import Navigation from './components/Navigation'
 import DisplayBox from './components/DisplayBox'
 import {data} from './data/countyDescriptions.js'
 
-const navItems=[{title: 'About', url: null}] //Next.js url paths.
+const navItems=[{title: 'Redlow', url: 'https://redlow.studio/about'}] //Next.js url paths.
 
 export default function App() {
   return (

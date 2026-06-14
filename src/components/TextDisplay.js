@@ -1,12 +1,11 @@
 import styled from 'styled-components'
-import textdecal from '../img/textangles.png'
 
 import { Mdata } from '../data/countyMovement.js'
-
 
 export default function TextDisplay ({target}) {
     const name = target.name || 'Error'
     const text = target.text || 'Try refreshing'
+
     const net = (name) => {
         if (Mdata[name]?.change > 0) {
             return '#32a852'
@@ -14,193 +13,266 @@ export default function TextDisplay ({target}) {
             return '#a83e32'
         }
     }
-    const dataExists = Mdata[name];
-    const change = dataExists ? `${Mdata[name].change.toFixed(2)}%` : '';
-    //TODO: format with css, not non breaking spaces, sheesh
+
+    const dataExists = Mdata[name]
+    const change = dataExists ? `${Mdata[name].change.toFixed(2)}%` : ''
+
     return(
         <TextContainer>
-            <State net={net(name)}>
-                <h2>{name}</h2>&nbsp;&nbsp;
-                <p>{change}</p>
-            </State>
+            <Header>
+                <MetaRow>
+                    <Label>selected county</Label>
+                    {change && <Change $net={net(name)}>{change}</Change>}
+                </MetaRow>
+
+                <CountyName>{name}</CountyName>
+            </Header>
+
             <Text>{text}</Text>
         </TextContainer>
     )
 }
 
-//styles
-const TextContainer = styled.div`
-      background-image: url(${textdecal});
-    background-size: cover;
-    background-repeat: no-repeat;
-    filter: saturate(160%) contrast(105%);
-
-    border-left: 1px solid #95fcf2;
-    border-right: 1px solid #95fcf2;
-    border-radius: 0 0 15px 15px;
+const TextContainer = styled.article`
     display: flex;
     flex-direction: column;
-    width: 30%;
+    width: 31%;
     height: 100%;
+    min-width: 320px;
     margin: 0;
     padding: 0;
-    align-items: center;
+    overflow: hidden;
+
+    color: var(--az-text);
+    background:
+        linear-gradient(180deg, rgba(2, 5, 17, 0.9) 0%, rgba(2, 5, 15, 0.96) 80%);
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
       
     @media (max-width: 1366px) {
-        width: 50%;
-        height: 60%;
-        margin: 0;
+        width: 34%;
+        min-width: 285px;
     }
 
     @media (max-width: 1024px) {
         width: 100%;
-        height:40%;
+        height: 38vh;
+        min-height: 300px;
     }
-    @media (max-width: 767px) {
-        font-size: xx-small;
-        width: 100%;
-        height:40%;
-      }
-`;
-const State = styled.div`
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-    color: white;
-    margin: 0;
-    padding: 0px;
-    padding-top: 20px;
 
-    h2, p {
-        font-size: 2em;  // you can adjust the font size as needed
+    @media (max-width: 767px) {
+        width: 100%;
+        height: 38vh;
+        min-height: 250px;
     }
-    p{
-        font-size: 1rem;
-        color: ${({ net }) => net}; // use the net prop here
-    }
+`
+
+const Header = styled.header`
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+    padding: 22px 22px 20px;
+    background:
+        linear-gradient(180deg, rgba(14, 25, 58, 0.44) 0%, rgba(4, 8, 24, 0) 100%);
+    border: none;
+    box-shadow: none;
 
     @media (max-width: 1366px) {
-        h2, p {
-            font-size: 1rem;
-        }
-        p{
-            font-size: 1rem
-        }
-    }
-
-    @media (max-width: 1024px) {
-        h2, p {
-            font-size: 1rem;
-        }
-        p{
-            font-size: 1rem
-        }
+        padding: 18px 18px 17px;
     }
 
     @media (max-width: 767px) {
-        padding-top: 10px;
-        h2, p {
-            font-size: 1rem;
-        }
-        p{
-            font-size: .5rem
-        }
+        padding: 14px 13px 13px;
     }
-`;
+`
+
+const MetaRow = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    width: 100%;
+    margin: 0 0 18px;
+    padding: 0;
+`
+
+const Label = styled.span`
+    display: block;
+    margin: 0;
+    padding: 0;
+    color: rgba(181, 218, 219, 0.58);
+    font-size: .62rem;
+    line-height: .85rem;
+    font-weight: 800;
+    letter-spacing: 2.2px;
+    text-align: left;
+    text-transform: uppercase;
+`
+
+const Change = styled.p`
+    flex: 0 0 auto;
+    margin: 0;
+    padding: 0;
+    color: ${({ $net }) => $net};
+    font-size: .8rem;
+    line-height: 1rem;
+    font-weight: 900;
+    letter-spacing: 1.4px;
+`
+
+const CountyName = styled.h2`
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    color: rgba(244, 238, 222, 0.96);
+    font-size: clamp(1.55rem, 2.25vw, 2.45rem);
+    line-height: 1;
+    font-weight: 900;
+    letter-spacing: -.055em;
+    white-space: nowrap;
+
+    @media (max-width: 1366px) {
+        font-size: clamp(1.35rem, 2vw, 2rem);
+        line-height: 1;
+    }
+
+    @media (max-width: 767px) {
+        font-size: 1.2rem;
+        line-height: 1;
+        letter-spacing: -.045em;
+        white-space: normal;
+    }
+`
+
 const Text = styled.div`
-    width: 90%;
-    height: 90%;
-    color: white;
-    text-shadow: 1px 1px 1px black;
-    text-decoration: none;
-    margin: 1rem;
-    padding: 1rem;
-    padding-top: 0px;
-    font-size: large;
-    text-align: justify;
-    overflow-y: scroll;
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+    margin: 0;
+    padding: 0 22px 22px;
+    overflow-y: auto;
     overflow-x: hidden;
-    ::-webkit-scrollbar {
-        width: 6px;               /
+
+    color: rgba(232, 232, 220, 0.82);
+    background: transparent;
+    text-align: left;
+    text-shadow: none;
+    text-decoration: none;
+    font-size: 1rem;
+    line-height: 1.62rem;
+
+    &::-webkit-scrollbar {
+        width: 6px;
     }
-    ::-webkit-scrollbar-track {
-        background: navyblue;        
+
+    &::-webkit-scrollbar-track {
+        background: rgba(2, 5, 15, 0.9);
     }
-    ::-webkit-scrollbar-thumb {
-        background-color: navyblue;    
-        border-radius: 20px;       
-        border: 1px solid #95fcf2;
+
+    &::-webkit-scrollbar-thumb {
+        background-color: rgba(181, 218, 219, 0.22);
+        border-radius: 0;
+        border: none;
+    }
+
+    & > p{
+        margin: 0 0 1rem;
+        padding: 0;
+    }
+
+    & > p:last-child{
+        margin-bottom: 0;
     }
 
     & > p > a {
-        color: #6ea5ff;
+        color: rgba(144, 185, 227, 0.95);
         text-decoration: none;
+
         &:visited {
-            color: #eb9234;
+            color: rgba(211, 158, 99, 0.95);
         }
+
         &:hover {
-            color: #ffe89c;
-            text-decoration: ;
+            color: rgba(244, 238, 222, 0.98);
         }
+
         &:active {
-            color: red;
-          }
+            color: rgba(255, 167, 94, 0.95);
+        }
     }
+
+    & > ul{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin: 1.1rem 0 0;
+        padding: 0;
+    }
+
     & > ul > li {
         list-style: none;
-        font-size: normal;
-        margin-top: 3rem;
-        @media (max-width: 767px) {
-            padding: .5rem;
-            margin: .5rem;
-          }
+        margin: 0;
+        padding: 0;
     }
 
     & > ul > li > a {
+        display: inline-flex;
+        align-items: center;
+        min-height: 34px;
+        padding: 0;
         text-decoration: none;
-        text-shadow: 1px 1px 6px black;
-        background-color: rgba(124, 110, 64, 0.75);
-        padding: 1rem;
-        font-size: 1rem;
-        font-weight: 700;
-        margin-top: 1rem;
-        border-radius: 5px;
-        border: 1px solid #6ea5ff;
-        color: #6ea5ff;
-        
+        text-shadow: none;
+        background: transparent;
+        font-size: .9rem;
+        line-height: 1rem;
+        font-weight: 800;
+        border: none;
+        border-radius: 0;
+        color: rgba(144, 185, 227, 0.95);
+        transition:
+            color 160ms ease,
+            transform 160ms ease;
 
         &:visited {
-            color: #eb9234;
-            border: 1px solid #eb9234;
+            color: rgba(211, 158, 99, 0.95);
         }
+
         &:hover {
-            color: #ffe89c;
-            border: 1px solid #ffe89c;
-            text-decoration: ;
+            color: rgba(244, 238, 222, 0.98);
+            transform: translateX(3px);
         }
+
         &:active {
-            color: red;
-          }
-          @media (max-width: 767px) {
-            font-size: x-small;
-            padding: .25rem;
-            margin: .25rem;
-          }
+            color: rgba(255, 167, 94, 0.95);
+        }
     }
 
     @media (max-width: 1366px) {
-        font-size: large;
-        padding: 0px;
+        padding: 0 18px 18px;
+        font-size: .94rem;
+        line-height: 1.5rem;
     }
 
     @media (max-width: 1024px) {
-        font-size: medium;
-        padding: 0px;
+        padding: 0 16px 16px;
+        font-size: .92rem;
     }
+
     @media (max-width: 767px) {
-        font-size: x-small;
-        padding: 0px;
-        margin: 0;
-      }
-`;
+        padding: 0 13px 13px;
+        font-size: .78rem;
+        line-height: 1.25rem;
+
+        & > ul{
+            gap: 8px;
+        }
+
+        & > ul > li > a {
+            min-height: 28px;
+            font-size: x-small;
+            padding: 0;
+        }
+    }
+`

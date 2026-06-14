@@ -9,27 +9,26 @@ import ResOverlay from './ResOverlay'
 import StatesOverlay from './StatesOverlay'
 import InterstateOverlay from './InterstateOverlay'
 
-
-
 export default function SceneDisplay ({setText, target, visibility}) {
-    const [camera, setCamera] = useState([0, 40, 3]) // extracted from PerspectiveCamera for coordinate translations
+    const [camera, setCamera] = useState([0, 40, 3])
     const {nodes} = useGLTF('/models/Arizona.glb', true)
-    const [visible, setVisible] = useState(null) //paired with useEff. this is an über quick fix to prevent meshes from being caught up in overlay re-renders.
+    const [visible, setVisible] = useState(null)
 
     const handleCamera = (coords) => {
         //const cameraCoords = [transX(coords[0]), transY(coords[1]), transz(coords[2])]
         //setCamera(cameraCoords)
     }
     
-    //this iterates through object nodes and replaces them with copies to unbind meshes from each other so that pointer effects are confined to the mesh interacted with, not the entire group.
     for (let nodeName in nodes) {
         if (nodes[nodeName].material) {
             nodes[nodeName].material = nodes[nodeName].material.clone()
-        }};
+        }
+    }
+
     useEffect(()=>{
         setVisible(visibility)
     }, [visibility])
-    //NOTICE: Animated Mesh props are growing
+
     return(
         <ThreeContainer>
             <Suspense fallback={'Loading models...'}>
@@ -56,7 +55,7 @@ export default function SceneDisplay ({setText, target, visibility}) {
                     />
                     <SpotLight 
                         position={[70, 10, -45]}
-                        color={0x07b2b8}
+                        color={0x2be7fc}
                         distance={300}
                         angle={0.5}
                         attenuation={50}
@@ -81,30 +80,42 @@ export default function SceneDisplay ({setText, target, visibility}) {
                     <AnimatedMesh mesh={nodes.Pima} name={"Pima"} coords={[2,3,11]} setText={setText} handleCamera={handleCamera} target={target} visibility={visible} gain={true}/>
                     <AnimatedMesh mesh={nodes.SantaCruz} name={"Santa Cruz"} coords={[4.2, 3, 13.15]} setText={setText} handleCamera={handleCamera} target={target} visibility={visible} gain={true}/>
                     <AnimatedMesh mesh={nodes.Mohave} name={"Mohave"} coords={[-10.5,3,-9]} setText={setText} handleCamera={handleCamera} target={target} visibility={visible} gain={true}/>
-
                 </Canvas>
             </Suspense>
         </ThreeContainer>
     )
 }
+
 const ThreeContainer = styled.div`
-    width: 55%;
+    flex: 1 1 auto;
+    width: 58%;
     height: 100%;
+    min-width: 0;
+    overflow: hidden;
 
-    @media (max-width: 1366px) {
-        
+    border-radius: 4px;
+
+    & canvas{
+        display: block;
+        width: 100% !important;
+        height: 100% !important;
+        outline: none;
     }
-
     @media (max-width: 1024px) {
         width: 100%;
+        height: 46vh;
+        min-height: 320px;
+        max-height: 430px;
+        flex: 0 0 auto;
     }
+    
     @media (max-width: 767px) {
         width: 100%;
-        height: 70%;
-      }
-`;
-
-//camera transformation helpers:
+        height: 38vh;
+        min-height: 230px;
+        max-height: 310px;
+    }
+`
 
 const transformX = (coord) =>{
     return (coord)

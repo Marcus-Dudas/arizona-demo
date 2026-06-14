@@ -121,8 +121,7 @@ export const data = {
                             Further reading:
                         </p>
                         <ul>
-                            <li><a href="https://www.doi.gov/blog/13-things-you-didnt-know-about-grand-canyon-national-park" target='_blank' rel="noreferrer">Grand Canyon Primer</a></li>
-                            <li><a href="http://www.sedonagalleryassociation.com/" target='_blank' rel="noreferrer">Sedona Gallery Association</a></li>
+                            <li><a href="https://visitsedona.com/shopping/art-galleries/" target='_blank' rel="noreferrer">Sedona Gallery Association</a></li>
                             <li><a href="https://visitsedona.com/blog/getting-grounded-a-guide-to-sedonas-trails/" target='_blank' rel="noreferrer">Sedona Trail Guide</a></li>  
                         </ul>
                     </>
@@ -161,8 +160,7 @@ export const data = {
                                Though Arizona’s clear skies allow for great stargazing all year, Graham’s sparse 
                                population, darker skies, and higher elevations make it an exceptionally 
                                good choice for astronomical observation. Still, environmental concerns and Native American interests made for
-                                <a href="https://sites.coloradocollege.edu/indigenoustraditions/sacred-lands/vatican-observatory-vs-san-carlos-apache-sacred-land/" target='_blank' rel="noreferrer">
-                                &nbsp;an interesting public debate</a> surrounding its placement.
+                                &nbsp;an interesting public debate surrounding its placement.
                             </p>
                             <p>
                                 Safford is the seat of Graham county with a small population of around 10,000 people (see the deep look below).
@@ -170,7 +168,7 @@ export const data = {
                                 Further reading:
                             </p>
                             <ul>
-                                <li><a href="https://dwellics.com/arizona/community-in-safford" target='_blank' rel="noreferrer">A deep look at Safford demographics</a></li>
+                               
                                 <li><a href="https://www.eacourier.com/news/graham-county-voters-pass-prop-401/article_1483e3b6-6146-11ed-98c2-af2147360ee2.html" target='_blank' rel="noreferrer">Zoning for Graham's Marijuana greenhouses</a></li>
                             </ul>
 
@@ -188,7 +186,7 @@ export const data = {
                         Further reading:
                     </p>
                     <ul>
-                    <li><a href="https://static.azdeq.gov/pn/app_fmmorenci_dp.pdf" target='_blank' rel="noreferrer">ADEQ protects wells</a></li>
+
                     </ul>
                 </>
                 )
@@ -213,7 +211,7 @@ export const data = {
                         Further reading:
                     </p>
                     <ul>
-                        <li><a href="https://ktar.com/story/5489463/in-arizona-fresh-scrutiny-of-saudi-owned-farms-water-use/" target='_blank' rel="noreferrer">La Paz rescinds Saudi water permits</a></li>
+                        
                     </ul>
                  </>
                 )
@@ -253,7 +251,7 @@ export const data = {
                                                 Further reading:
                     </p>
                     <ul>
-                        <li><a href="https://gillespieshields.com/the-little-known-history-of-phoenix-arizona/" target='_blank' rel="noreferrer">History of Phoenix</a></li>
+                      
                     </ul>
                 </>
                 )
@@ -262,8 +260,8 @@ export const data = {
         "name": "Mohave County",
         "text": (<>
                     <p>
-                        The <a href="https://mdhca.org/mojave-versus-mohave" target='_blank' rel="noreferrer">
-                        Mojave</a> desert and people are this county's namesake. Along with a portion of The Grand Canyon, the Colorado River winds through this county so that, 
+                        The
+                        Mojave desert and people are this county's namesake. Along with a portion of The Grand Canyon, the Colorado River winds through this county so that, 
                         along with La Paz, Mohave benefits from Parker Dam indirectly through Havasu Lake. <a href="https://www.havasuchamber.com/community-profile.html" target='_blank' rel="noreferrer">
                         Lake Havasu</a> is a recreation 
                         town on Havasu Lake with year-round warmth and the original London Bridge.
@@ -310,7 +308,7 @@ export const data = {
                                Further reading:
                     </p>
                     <ul>
-                        <li><a href="http://npshistory.com/brochures/pefo/geology-2006.pdf" target='_blank' rel="noreferrer">Geology and the Painted Desert</a></li>  
+                        
                         <li><a href="https://www.newyorker.com/news/dispatch/the-political-attack-on-the-native-american-vote" target='_blank' rel="noreferrer">Native America and the vote</a></li>
                         <li><a href="https://www.holbrookaz.gov/" target='_blank' rel="noreferrer">Holbrook, county seat</a></li>  
                     </ul>
@@ -321,8 +319,8 @@ export const data = {
         "name": "Pima County",
         "text": ( <>
                     <p>
-                        This county is best known for <a href="https://www.tucsonaz.gov/files/transportation/SurroundingCommunitiesProfiles/Tucson_2006.pdf" target='_blank' rel="noreferrer">
-                        Tucson</a>, a university town that transformed into a bustling urban center. Its wetter, cooler 
+                        This county is best known for
+                        Tucson, a university town that transformed into a bustling urban center. Its wetter, cooler 
                         climate and active monsoon seasons keep its famous <a href="https://www.nps.gov/sagu/index.htm" target='_blank' rel="noreferrer">
                             Saguaro National Park</a> a lively cactus-green. The highly 
                         regarded <a href="https://www.arizona.edu/about" target='_blank' rel="noreferrer">
@@ -330,8 +328,8 @@ export const data = {
                         taking stock of wild life for class credit, or otherwise bringin' hip vibes to Tucson's many Sonoran eateries.
                     </p>
                     <p>
-                        Much of Pima county's western portion is within the <a href="http://www.tonation-nsn.gov/tohono-oodham-history/" target='_blank' rel="noreferrer">
-                        Tohono O'Odham Nation's Reservation</a>. The total land area of this reservation nears that of Connecticut and is where 
+                        Much of Pima county's western portion is within the
+                        Tohono O'Odham Nation's Reservation. The total land area of this reservation nears that of Connecticut and is where 
                         the Hohokam people historically irrigated land and crossed to reach nearby mountain dwellings.
                     </p>
                     <p>
@@ -370,8 +368,8 @@ export const data = {
         "name": "Santa Cruz County",
         "text": (<>
                     <p>
-                        Named for the <a href="https://www.tucsonaz.gov/water/SCRHP-history" target='_blank' rel="noreferrer">
-                        Santa Cruz River</a>, the seat of county governance is the border town of Nogales.
+                        Named for the
+                        Santa Cruz River, the seat of county governance is the border town of Nogales.
                         Nogales serving as a port of entry between the U.S. and Mexico, the county and local governments of Santa Cruz are naturally 
                         involved in immigration activities.
                         <br/><br/>

@@ -1,16 +1,14 @@
-import { useSpring, animated } from 'react-spring';
-import { Html } from '@react-three/drei';
-import { useState, useEffect } from 'react';
-import styled from 'styled-components';
+import { Html } from '@react-three/drei'
+import { useState, useEffect } from 'react'
+import styled from 'styled-components'
 
 export default function AnimatedMesh({mesh, name, coords, setText, handleCamera, target, visibility={'Movement': false}, gain= true}) {
-    const [tipVisible, setTipVisible] = useState(false);
-    const [selected, setSelected] = useState(false);
-    const net = gain ? 0x32a852 : 0xa83e32;
-    const pOut = visibility.Movement ? net : 0xf5e7c1;
+    const [tipVisible, setTipVisible] = useState(false)
+    const [selected, setSelected] = useState(false)
+    const net = gain ? 0x32a852 : 0xa83e32
+    const pOut = visibility.Movement ? net : 0xf5e7c1
+
     const showSelection = (target) =>{
-        //render order seems to have prevented truthy outcome so added to above useEffect()
-        //each mesh is recieving prop and evaluating whether it is selected.
         if((target.name) === (`${name} County`)) {
             setSelected(true)
         } else {
@@ -20,41 +18,43 @@ export default function AnimatedMesh({mesh, name, coords, setText, handleCamera,
     }
 
     const handlePointerOver = (event) => {
-        event.stopPropagation();
+        event.stopPropagation()
         if (!selected) {
             event.object.material.color.set(0xffa75e)
         } else if (selected) {
             event.object.material.color.set(0xffa75e)
         }
-        setTipVisible(true);
-    };
+        setTipVisible(true)
+    }
+
     const handlePointerOut = (event) => {
-        event.stopPropagation();
+        event.stopPropagation()
         if (!selected){
-        event.object.material.color.set(pOut)
+            event.object.material.color.set(pOut)
         }
-        setTipVisible(false);
-    };
+        setTipVisible(false)
+    }
+
     const handleClick = (event) => {
-        event.stopPropagation();
+        event.stopPropagation()
         //handleCamera(coords)
         setText(name)
-    };
+    }
     
     useEffect( ()=>{
         showSelection(target)
     }, [target]
-    );
+    )
     
     useEffect(() => {
         if (visibility.Movement) {
-            mesh.material.color.set(net);
+            mesh.material.color.set(net)
         } else if (!selected) {
-            mesh.material.color.set(0xf5e7c1);
+            mesh.material.color.set(0xf5e7c1)
         } else if (selected) {
-            mesh.material.color.set(0xffa75e);
+            mesh.material.color.set(0xffa75e)
         }
-    }, [visibility]); 
+    }, [visibility]) 
 
     return (
         <>
@@ -65,18 +65,27 @@ export default function AnimatedMesh({mesh, name, coords, setText, handleCamera,
                 onClick={handleClick} 
             />
             {tipVisible && 
-                <Html style={{pointerEvents:'none'}}position={coords}>
+                <Html style={{pointerEvents:'none'}} position={coords}>
                     <StyledText>
                         {name}
                     </StyledText>
                 </Html>
             }
         </>
-    );
+    )
 }
 
 const StyledText = styled.p`
-    color: aliceblue;
-    text-align: center;
+    margin: 0;
+    padding: 6px 9px 5px;
+    color: rgba(245, 253, 253, 0.94);
+    border-radius: 3px;
+    font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: .72rem;
+    line-height: 1rem;
     font-weight: 800;
-`;
+    letter-spacing: 1.2px;
+    text-align: center;
+    text-transform: uppercase;
+    white-space: nowrap;
+`
